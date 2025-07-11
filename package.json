@@ -2,5 +2,23 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
     "tailwindcss": "^4.1.11"
-  }
+  },
+  "name": "ushuaiapadelcenter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agusvj/ushuaiapadelcenter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Agusvj/ushuaiapadelcenter/issues"
+  },
+  "homepage": "https://github.com/Agusvj/ushuaiapadelcenter#readme",
+  "description": ""
 }
