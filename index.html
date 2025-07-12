@@ -7,143 +7,223 @@
     <link href="./src/output.css" rel="stylesheet" />
   </head>
   <body>
-
-    <!--CTA-->
-    <section class="bg-[url(/content/pala-de-padel-que-descansa-sobre-la-red.jpg)]  items-center justify-center bg-cover bg-center relative flex">
-      <div class="bg-sky-700/30 z-5 absolute  w-full h-full inset-0 "></div>
-      <div class="mx-auto max-w-7xl z-6">
-       
-        <div class="relative isolate overflow-hidden  px-6 pt-16 py-16  sm:px-16 md:pt-12 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 ">
-          
-          <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto sm:py-6 lg:py-12 lg:text-left justify-center justify-items-center items-center z-10">
-            <h2 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl text-shadow-lg/65 ">¡Viví el pádel al máximo!</h2>
-            <p class="mt-6 text-lg/8  text-pretty text-white text-shadow-lg/85">Reservá tu cancha y sumate a una experiencia única</p>
-            <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start ">
-              <a href="#" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white mb-2">Reservá tu turno</a>
-            </div>
-          </div>
+    <header class="fixed inset-x-0 top-0 z-50 bg-azul">
+      <nav
+        class="flex items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img class="h-8 w-auto" src="./imgs/logo-large.png" alt="" />
+          </a>
         </div>
-      </div>
-    </section>
-    <!--CTA-->
-
-    <!--UBICACION-->
-  <section class=" bg-gray-900 lg:flex-auto  items-center justify-center ">
-    <div class="mx-auto max-w-7xl ">
-      <div class="relative isolate overflow-hiddenpx-6  sm:py-6 pt-16 sm:px-16 md:pt-12 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 items-center justify-center ">
-      <!--
-        <svg viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 size-256 -translate-y-1/2 mask-[radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
-          <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
-          <defs>
-            <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-              <stop stop-color="#090b70" />
-              <stop offset="1" stop-color="#090b70" />
-            </radialGradient>
-          </defs>
-        </svg>
-        -->
-        
-        <div class="mx-auto max-w-md text-center  lg:mx-0  lg:py-32 lg:text-left ">
-          <h2 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">¿Donde estamos? </h2>
-          <p class="mt-3 text-lg/8 text-pretty text-white">Perito Francisco Moreno 1565</p>
-          <p class="mt-3 text-lg/8 text-pretty text-white">En colectivo: Lineas A y E (Parada 348)</p>
-          <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-            
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            id="buttonOpen"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="size-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="#" class="text-sm/6 font-semibold text-white">Servicios</a>
+          <a href="#" class="text-sm/6 font-semibold text-white">Contacto</a>
+          <a href="#" class="text-sm/6 font-semibold text-white"
+            >¿Donde Estamos?</a
+          >
+          <a href="#" class="text-sm/6 font-semibold text-white">Redes</a>
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50 hidden" id="backgroundBackdrop"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 hidden"
+          id="mobileMenu"
+        >
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Ushuaia Padel Center</span>
+              <img
+                class="h-8 w-auto"
+                src="./imgs/logo-large.png"
+                alt="logo Ushuaia Padel Center"
+              />
             </a>
+            <button
+              type="button"
+              class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              id="buttonClose"
+              id="buttonClose"
+            >
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="size-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
           </div>
-        </div>
-        <div class="relative mt-3  h-80 flex lg:mt-6  md:justify-center">
-            <iframe class="  rounded-3xl h-80 items-center justify-center " src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18399.63930540179!2d-68.27949614812759!3d-54.79833576656913!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c22c11f3e9ec7%3A0x1fbf5a745077571!2sPerito%20Francisco%20Moreno%201565%2C%20V9410KSZ%20Ushuaia%2C%20Tierra%20del%20Fuego%2C%20Argentina!5e0!3m2!1sen!2sus!4v1752242396101!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-<!--UBICACION-->
-
-<!--CONTACTO-->
- <section class="bg-[url(/content/pelota-de-padel-golpeando-la-red.jpg)] bg-cover bg-center relative px-6 py-24 sm:py-32 lg:px-8  ">
- <div class="bg-sky-700/30 z-7 absolute  w-full h-full inset-0 "></div>
-  <div class="mx-auto max-w-6xl text-center z-8 relative ">
-    <h1 class="text-4xl font-semibold tracking-tight text-balance  text-shadow-lg/65 text-white sm:text-4xl">Contactanos</h1>
-    <p class="mt-2 text-lg/8 text-white  text-shadow-lg/65">Completá el formulario y sumate al club de pádel más austral del mundo</p>
-  </div>
-  <form action="#" method="POST" class=" justify-center items-center mx-auto mt-16 max-w-xl sm:mt-20 relative z-8   ">
-    <div class="grid grid-cols-2 gap-x-8 gap-y-6 items-center object-center  ">
-      <div class="col-span-2 md:col-span-1"> 
-        <label for="first-name " class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-white">Tu nombre</label>
-        <div class="mt-2.5">
-          <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" />
-        </div>
-      </div>
-      <!--
-      <div class="sm:col-span-2 md:col-span-1">
-        <label for="email" class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-white">Email</label>
-        <div class="mt-2.5">
-          <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md bg-white px-3.5 py-2 text-base  text-white outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" />
-        </div>
-      </div>
-      -->
-      <div class="col-span-2 md:col-span-1">
-        <label for="phone-number" class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-white">Número de Teléfono</label>
-        <div class="mt-2.5">
-          <div class="flex rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
-            <div class="grid shrink-0 grid-cols-1 focus-within:relative">
-              
-              
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >Product</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >Features</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >Marketplace</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >Company</a
+                >
+              </div>
             </div>
-            <input type="text" name="phone-number" id="phone-number" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base  text-white placeholder:text-gray-400 focus:outline-none sm:text-sm/6" placeholder="  2901-123456" />
           </div>
         </div>
       </div>
-      <div class="col-span-2">
-        <label for="message" class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-white">Tu duda o mensaje</label>
-        <div class="mt-2.5">
-          <textarea name="message" id="message" rows="4" class="block w-full rounded-md bg-white px-3.5 py-2 text-base  text-white outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"></textarea>
-        </div>
+    </header>
+
+    <div class="relative isolate pt-14 bg-heroImg lg:h-[100vh]">
+      <div
+        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        aria-hidden="true"
+      >
+        <div
+          class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
+          style="
+            clip-path: polygon(
+              74.1% 44.1%,
+              100% 61.6%,
+              97.5% 26.9%,
+              85.5% 0.1%,
+              80.7% 2%,
+              72.5% 32.5%,
+              60.2% 62.4%,
+              52.4% 68.1%,
+              47.5% 58.3%,
+              45.2% 34.5%,
+              27.5% 76.7%,
+              0.1% 64.9%,
+              17.9% 100%,
+              27.6% 76.8%,
+              76.1% 97.7%,
+              74.1% 44.1%
+            );
+          "
+        ></div>
       </div>
-      <!--
-      <div class="flex gap-x-4 sm:col-span-2">
-        <div class="flex h-6 items-center">
-          <div class="group relative inline-flex w-8 shrink-0 rounded-full bg-gray-200 p-px inset-ring inset-ring-gray-900/5 outline-offset-2 outline-indigo-600 transition-colors duration-200 ease-in-out has-checked:bg-indigo-600 has-focus-visible:outline-2">
-            <span class="size-4 rounded-full bg-white shadow-xs ring-1 ring-gray-900/5 transition-transform duration-200 ease-in-out group-has-checked:translate-x-3.5"></span>
-            <input type="checkbox" class="absolute inset-0 appearance-none focus:outline-hidden" aria-label="Agree to policies" id="agree-to-policies" name="agree-to-policies" />
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="text-center">
+          <h1
+            class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl"
+          >
+            Ushuaia Padel Center
+          </h1>
+          <p
+            class="mt-8 text-lg font-medium text-pretty text-contrast sm:text-xl/8"
+          >
+            El club de Padel mas austral del mundo
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="#"
+              class="rounded-md bg-azul px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-azul-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              >Quiero jugar</a
+            >
+            <a href="#" class="text-sm/6 font-semibold text-white"
+              >Servicios <span aria-hidden="true">→</span></a
+            >
           </div>
         </div>
-        <label class="text-sm/6 text-gray-600" for="agree-to-policies">
-          By selecting this, you agree to our
-          <a href="#" class="font-semibold whitespace-nowrap text-indigo-600">privacy policy</a>.
-        </label>
       </div>
-      -->
-      <div class="mt-10  text-center col-span-2">
-      <button type="submit" class="rounded-md bg-indigo-600 px-3.5 py-4.5 text-center text-md font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Enviar</button>
+      <div
+        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        aria-hidden="true"
+      >
+        <div
+          class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
+          style="
+            clip-path: polygon(
+              74.1% 44.1%,
+              100% 61.6%,
+              97.5% 26.9%,
+              85.5% 0.1%,
+              80.7% 2%,
+              72.5% 32.5%,
+              60.2% 62.4%,
+              52.4% 68.1%,
+              47.5% 58.3%,
+              45.2% 34.5%,
+              27.5% 76.7%,
+              0.1% 64.9%,
+              17.9% 100%,
+              27.6% 76.8%,
+              76.1% 97.7%,
+              74.1% 44.1%
+            );
+          "
+        ></div>
+      </div>
     </div>
-    </div>
-  </form>
-</section>
 
-
-<!--CONTACTO-->
-
-    <div class="overflow-hidden bg-[#000000] py-24 sm:py-32">
+    <section class="overflow-hidden bg-negro py-24 sm:py-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div
           class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:max-w-none lg:grid-cols-2"
         >
           <div class="lg:pt-4 lg:pr-8">
             <div class="lg:max-w-lg">
-              <h2 class="text-[#35db31] text-6xl sm:text-2xl">Servicios</h2>
+              <h2 class="text-contrast text-6xl sm:text-2xl">Servicios</h2>
               <p
                 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#fafafa]"
               >
                 Todo en un solo lugar
               </p>
-              <p class="mt-6 text-xl text-[#35db31]">
+              <p class="mt-6 text-xl text-contrast">
                 Conocé nuestros servicios pensados para vos.
               </p>
               <!--listado de servicios-->
               <dl
-                class="mt-10 max-w-xl space-y-8 text-base/7 text-[#35db31] lg:max-w-none"
+                class="mt-10 max-w-xl space-y-8 text-base/7 text-contrast lg:max-w-none"
               >
                 <!--alquiler de canchas-->
                 <div class="relative pl-9">
@@ -153,7 +233,7 @@
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      class="size-6 absolute top-1 left-1 text-[#35db31]"
+                      class="size-6 absolute top-1 left-1 text-contrast"
                     >
                       <path
                         d="M12 11.993a.75.75 0 0 0-.75.75v.006c0 .414.336.75.75.75h.006a.75.75 0 0 0 .75-.75v-.006a.75.75 0 0 0-.75-.75H12ZM12 16.494a.75.75 0 0 0-.75.75v.005c0 .414.335.75.75.75h.005a.75.75 0 0 0 .75-.75v-.005a.75.75 0 0 0-.75-.75H12ZM8.999 17.244a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.006a.75.75 0 0 1-.75.75h-.006a.75.75 0 0 1-.75-.75v-.006ZM7.499 16.494a.75.75 0 0 0-.75.75v.005c0 .414.336.75.75.75h.005a.75.75 0 0 0 .75-.75v-.005a.75.75 0 0 0-.75-.75H7.5ZM13.499 14.997a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75h-.006a.75.75 0 0 1-.75-.75v-.005ZM14.25 16.494a.75.75 0 0 0-.75.75v.006c0 .414.335.75.75.75h.005a.75.75 0 0 0 .75-.75v-.006a.75.75 0 0 0-.75-.75h-.005ZM15.75 14.995a.75.75 0 0 1 .75-.75h.005a.75.75 0 0 1 .75.75v.006a.75.75 0 0 1-.75.75H16.5a.75.75 0 0 1-.75-.75v-.006ZM13.498 12.743a.75.75 0 0 1 .75-.75h2.25a.75.75 0 1 1 0 1.5h-2.25a.75.75 0 0 1-.75-.75ZM6.748 14.993a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Z"
@@ -179,7 +259,7 @@
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      class="size-6 absolute top-1 left-1 text-[#35db31]"
+                      class="size-6 absolute top-1 left-1 text-contrast"
                     >
                       <path
                         d="M11.25 4.533A9.707 9.707 0 0 0 6 3a9.735 9.735 0 0 0-3.25.555.75.75 0 0 0-.5.707v14.25a.75.75 0 0 0 1 .707A8.237 8.237 0 0 1 6 18.75c1.995 0 3.823.707 5.25 1.886V4.533ZM12.75 20.636A8.214 8.214 0 0 1 18 18.75c.966 0 1.89.166 2.75.47a.75.75 0 0 0 1-.708V4.262a.75.75 0 0 0-.5-.707A9.735 9.735 0 0 0 18 3a9.707 9.707 0 0 0-5.25 1.533v16.103Z"
@@ -202,7 +282,7 @@
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      class="size-6 absolute top-1 left-1 text-[#35db31]"
+                      class="size-6 absolute top-1 left-1 text-contrast"
                     >
                       <path
                         fill-rule="evenodd"
@@ -226,7 +306,7 @@
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      class="size-6 absolute top-1 left-1 text-[#35db31]"
+                      class="size-6 absolute top-1 left-1 text-contrast"
                     >
                       <path
                         d="m15 1.784-.796.795a1.125 1.125 0 1 0 1.591 0L15 1.784ZM12 1.784l-.796.795a1.125 1.125 0 1 0 1.591 0L12 1.784ZM9 1.784l-.796.795a1.125 1.125 0 1 0 1.591 0L9 1.784ZM9.75 7.547c.498-.021.998-.035 1.5-.042V6.75a.75.75 0 0 1 1.5 0v.755c.502.007 1.002.021 1.5.042V6.75a.75.75 0 0 1 1.5 0v.88l.307.022c1.55.117 2.693 1.427 2.693 2.946v1.018a62.182 62.182 0 0 0-13.5 0v-1.018c0-1.519 1.143-2.829 2.693-2.946l.307-.022v-.88a.75.75 0 0 1 1.5 0v.797ZM12 12.75c-2.472 0-4.9.184-7.274.54-1.454.217-2.476 1.482-2.476 2.916v.384a4.104 4.104 0 0 1 2.585.364 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 3.67 0 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 3.67 0 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 2.585-.364v-.384c0-1.434-1.022-2.7-2.476-2.917A49.138 49.138 0 0 0 12 12.75ZM21.75 18.131a2.604 2.604 0 0 0-1.915.165 4.104 4.104 0 0 1-3.67 0 2.605 2.605 0 0 0-2.33 0 4.104 4.104 0 0 1-3.67 0 2.605 2.605 0 0 0-2.33 0 4.104 4.104 0 0 1-3.67 0 2.604 2.604 0 0 0-1.915-.165v2.494c0 1.035.84 1.875 1.875 1.875h15.75c1.035 0 1.875-.84 1.875-1.875v-2.494Z"
@@ -250,13 +330,13 @@
             >
               <div class="relative min-w-full h-full">
                 <img
-                  src="./assets/clases.avif"
+                  src="./imgs/clases.avif"
                   class="min-w-full object-cover h-full"
                   alt="canchas"
                 />
                 <div class="absolute inset-0 flex items-center justify-center">
                   <div
-                    class="w-full translate-y-30 text-center bg-[#000000]/75 text-[#fafafa] px-4 py-2"
+                    class="w-full translate-y-30 text-center bg-negro/75 text-[#fafafa] px-4 py-2"
                   >
                     <h3 class="text-2xl font-semibold">Alquiler de Canchas</h3>
 
@@ -268,13 +348,13 @@
               </div>
               <div class="relative min-w-full h-full">
                 <img
-                  src="./assets/confiteria.avif"
+                  src="./imgs/confiteria.avif"
                   class="min-w-full object-cover h-full"
                   alt="confiteria"
                 />
                 <div class="absolute inset-0 flex items-center justify-center">
                   <div
-                    class="w-full translate-y-30 text-center bg-[#000000]/75 text-[#fafafa] px-4 py-2"
+                    class="w-full translate-y-30 text-center bg-negro/75 text-[#fafafa] px-4 py-2"
                   >
                     <h3 class="text-2xl font-semibold">Confitería</h3>
 
@@ -286,13 +366,13 @@
               </div>
               <div class="relative min-w-full h-full">
                 <img
-                  src="./assets/tienda.avif"
+                  src="./imgs/tienda.avif"
                   class="min-w-full object-cover h-full"
                   alt="tienda"
                 />
                 <div class="absolute inset-0 flex items-center justify-center">
                   <div
-                    class="w-full translate-y-30 text-center bg-[#000000]/75 text-[#fafafa] px-4 py-2"
+                    class="w-full translate-y-30 text-center bg-negro/75 text-[#fafafa] px-4 py-2"
                   >
                     <h3 class="text-2xl font-semibold">Nuestros Productos</h3>
 
@@ -304,13 +384,13 @@
               </div>
               <div class="relative min-w-full h-full">
                 <img
-                  src="./assets/vincenzo-morelli-aytk2hnocnw-unsplash-Yyvqw0VabQHZDQjp.avif"
+                  src="./imgs/vincenzo-morelli-aytk2hnocnw-unsplash-Yyvqw0VabQHZDQjp.avif"
                   class="min-w-full object-cover h-full"
                   alt="clases de padel"
                 />
                 <div class="absolute inset-0 flex items-center justify-center">
                   <div
-                    class="w-full translate-y-30 text-center bg-[#000000]/75 text-[#fafafa] px-4 py-2"
+                    class="w-full translate-y-30 text-center bg-negro/75 text-[#fafafa] px-4 py-2"
                   >
                     <h3 class="text-2xl font-semibold">Clases de Padel</h3>
 
@@ -324,21 +404,209 @@
           </div>
         </div>
       </div>
-    </div>
-    <script>
-    let carrusel = document.getElementById("carrusel");
-    let indexImagenActual = 0;
-    const cantidadDeImagenes = carrusel.children.length;
+    </section>
 
-    setInterval(function () {
-      indexImagenActual = indexImagenActual + 1;
-      if (indexImagenActual >= cantidadDeImagenes) {
-        indexImagenActual = 0;
-      }
-      carrusel.style.transform = `translateX(-${indexImagenActual * 100}%)`;
-    }, 4000);
-  </script>
+    <!--CTA-->
+    <section
+      class="bg-[url(/imgs/pala-de-padel-que-descansa-sobre-la-red.jpg)] items-center justify-center bg-cover bg-center relative flex"
+    >
+      <div class="bg-sky-700/30 z-5 absolute w-full h-full inset-0"></div>
+      <div class="mx-auto max-w-7xl z-6">
+        <div
+          class="relative isolate overflow-hidden px-6 pt-16 py-16 sm:px-16 md:pt-12 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
+        >
+          <div
+            class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto sm:py-6 lg:py-12 lg:text-left justify-center justify-items-center items-center z-10"
+          >
+            <h2
+              class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl text-shadow-lg/65"
+            >
+              ¡Viví el pádel al máximo!
+            </h2>
+            <p class="mt-6 text-lg/8 text-pretty text-white text-shadow-lg/85">
+              Reservá tu cancha y sumate a una experiencia única
+            </p>
+            <div
+              class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"
+            >
+              <a
+                href="#"
+                class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white mb-2"
+                >Reservá tu turno</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--CTA-->
+
+    <!--UBICACION-->
+    <section class="bg-gray-900 lg:flex-auto items-center justify-center">
+      <div class="mx-auto max-w-7xl">
+        <div
+          class="relative isolate overflow-hiddenpx-6 sm:py-6 pt-16 sm:px-16 md:pt-12 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 items-center justify-center"
+        >
+          <!--
+        <svg viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 size-256 -translate-y-1/2 mask-[radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
+          <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
+          <defs>
+            <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+              <stop stop-color="#090b70" />
+              <stop offset="1" stop-color="#090b70" />
+            </radialGradient>
+          </defs>
+        </svg>
+        -->
+
+          <div
+            class="mx-auto max-w-md text-center lg:mx-0 lg:py-32 lg:text-left"
+          >
+            <h2
+              class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl"
+            >
+              ¿Donde estamos?
+            </h2>
+            <p class="mt-3 text-lg/8 text-pretty text-white">
+              Perito Francisco Moreno 1565
+            </p>
+            <p class="mt-3 text-lg/8 text-pretty text-white">
+              En colectivo: Lineas A y E (Parada 348)
+            </p>
+            <div
+              class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"
+            ></div>
+          </div>
+          <div class="relative mt-3 h-80 flex lg:mt-6 md:justify-center">
+            <iframe
+              class="rounded-3xl h-80 items-center justify-center"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18399.63930540179!2d-68.27949614812759!3d-54.79833576656913!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c22c11f3e9ec7%3A0x1fbf5a745077571!2sPerito%20Francisco%20Moreno%201565%2C%20V9410KSZ%20Ushuaia%2C%20Tierra%20del%20Fuego%2C%20Argentina!5e0!3m2!1sen!2sus!4v1752242396101!5m2!1sen!2sus"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--UBICACION-->
+
+    <!--CONTACTO-->
+    <section
+      class="bg-[url(/imgs/pelota-de-padel-golpeando-la-red.jpg)] bg-cover bg-center relative px-6 py-24 sm:py-32 lg:px-8"
+    >
+      <div class="bg-sky-700/30 z-7 absolute w-full h-full inset-0"></div>
+      <div class="mx-auto max-w-6xl text-center z-8 relative">
+        <h1
+          class="text-4xl font-semibold tracking-tight text-balance text-shadow-lg/65 text-white sm:text-4xl"
+        >
+          Contactanos
+        </h1>
+        <p class="mt-2 text-lg/8 text-white text-shadow-lg/65">
+          Completá el formulario y sumate al club de pádel más austral del mundo
+        </p>
+      </div>
+      <form
+        action="#"
+        method="POST"
+        class="justify-center items-center mx-auto mt-16 max-w-xl sm:mt-20 relative z-8"
+      >
+        <div
+          class="grid grid-cols-2 gap-x-8 gap-y-6 items-center object-center"
+        >
+          <div class="col-span-2 md:col-span-1">
+            <label
+              for="first-name "
+              class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-white"
+              >Tu nombre</label
+            >
+            <div class="mt-2.5">
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                autocomplete="given-name"
+                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+              />
+            </div>
+          </div>
+          <!--
+      <div class="sm:col-span-2 md:col-span-1">
+        <label for="email" class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-white">Email</label>
+        <div class="mt-2.5">
+          <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md bg-white px-3.5 py-2 text-base  text-white outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" />
+        </div>
+      </div>
+      -->
+          <div class="col-span-2 md:col-span-1">
+            <label
+              for="phone-number"
+              class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-white"
+              >Número de Teléfono</label
+            >
+            <div class="mt-2.5">
+              <div
+                class="flex rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
+              >
+                <div
+                  class="grid shrink-0 grid-cols-1 focus-within:relative"
+                ></div>
+                <input
+                  type="text"
+                  name="phone-number"
+                  id="phone-number"
+                  class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                  placeholder="  2901-123456"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-span-2">
+            <label
+              for="message"
+              class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-white"
+              >Tu duda o mensaje</label
+            >
+            <div class="mt-2.5">
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+              ></textarea>
+            </div>
+          </div>
+          <!--
+      <div class="flex gap-x-4 sm:col-span-2">
+        <div class="flex h-6 items-center">
+          <div class="group relative inline-flex w-8 shrink-0 rounded-full bg-gray-200 p-px inset-ring inset-ring-gray-900/5 outline-offset-2 outline-indigo-600 transition-colors duration-200 ease-in-out has-checked:bg-indigo-600 has-focus-visible:outline-2">
+            <span class="size-4 rounded-full bg-white shadow-xs ring-1 ring-gray-900/5 transition-transform duration-200 ease-in-out group-has-checked:translate-x-3.5"></span>
+            <input type="checkbox" class="absolute inset-0 appearance-none focus:outline-hidden" aria-label="Agree to policies" id="agree-to-policies" name="agree-to-policies" />
+          </div>
+        </div>
+        <label class="text-sm/6 text-gray-600" for="agree-to-policies">
+          By selecting this, you agree to our
+          <a href="#" class="font-semibold whitespace-nowrap text-indigo-600">privacy policy</a>.
+        </label>
+      </div>
+      -->
+          <div class="mt-10 text-center col-span-2">
+            <button
+              type="submit"
+              class="rounded-md bg-indigo-600 px-3.5 py-4.5 text-center text-md font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Enviar
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!--CONTACTO-->
+
+    <script src="./js/main.js"></script>
   </body>
-  
 </html>
-

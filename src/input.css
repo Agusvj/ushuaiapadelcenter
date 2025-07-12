@@ -1,1 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+
+.text-contrast {
+    color: #35db31;
+}
+
+.bg-negro {
+    background-color: #101010;
+}
+
+.bg-azul {
+    background-color: #090b70;
+}
+
+.bg-azul:hover {
+    background-color: #2022a3;
+    transition: all 0.3s;
+}
+
+.bg-heroImg {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/imgs/cancha.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+p,
+dd {
+    font-family: "Hind", sans-serif;
+}
