@@ -11,10 +11,8 @@
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-sky-700: oklch(50% 0.134 242.749);
     --color-blue-500: oklch(62.3% 0.214 259.815);
-    --color-indigo-500: oklch(58.5% 0.233 277.117);
     --color-indigo-600: oklch(51.1% 0.262 276.966);
     --color-gray-50: oklch(98.5% 0.002 247.839);
-    --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
@@ -22,7 +20,6 @@
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-900: oklch(21% 0.034 264.665);
-    --color-gray-950: oklch(13% 0.028 261.692);
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-sm: 24rem;
@@ -322,6 +319,12 @@
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
+  .mt-3\.5 {
+    margin-top: calc(var(--spacing) * 3.5);
+  }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
@@ -420,9 +423,6 @@
   .max-w-xl {
     max-width: var(--container-xl);
   }
-  .min-w-0 {
-    min-width: calc(var(--spacing) * 0);
-  }
   .min-w-full {
     min-width: 100%;
   }
@@ -431,12 +431,6 @@
   }
   .shrink-0 {
     flex-shrink: 0;
-  }
-  .flex-grow {
-    flex-grow: 1;
-  }
-  .grow {
-    flex-grow: 1;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -642,12 +636,6 @@
   .px-20 {
     padding-inline: calc(var(--spacing) * 20);
   }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
-  }
-  .py-1\.5 {
-    padding-block: calc(var(--spacing) * 1.5);
-  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -844,6 +832,10 @@
   .outline-indigo-600 {
     outline-color: var(--color-indigo-600);
   }
+  .blur {
+    --tw-blur: blur(8px);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
   .blur-3xl {
     --tw-blur: blur(var(--blur-3xl));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -933,6 +925,11 @@
       outline-offset: calc(2px * -1);
     }
   }
+  .focus\:outline-offset-1 {
+    &:focus {
+      outline-offset: 1px;
+    }
+  }
   .focus\:outline-green-600 {
     &:focus {
       outline-color: var(--color-green-600);
@@ -941,12 +938,6 @@
   .focus\:outline-indigo-600 {
     &:focus {
       outline-color: var(--color-indigo-600);
-    }
-  }
-  .focus\:outline-none {
-    &:focus {
-      --tw-outline-style: none;
-      outline-style: none;
     }
   }
   .focus-visible\:outline-2 {
@@ -979,22 +970,6 @@
     &:has(*:focus-visible) {
       outline-style: var(--tw-outline-style);
       outline-width: 2px;
-    }
-  }
-  .has-\[input\:focus-within\]\:outline-2 {
-    &:has(*:is(input:focus-within)) {
-      outline-style: var(--tw-outline-style);
-      outline-width: 2px;
-    }
-  }
-  .has-\[input\:focus-within\]\:-outline-offset-2 {
-    &:has(*:is(input:focus-within)) {
-      outline-offset: calc(2px * -1);
-    }
-  }
-  .has-\[input\:focus-within\]\:outline-green-600 {
-    &:has(*:is(input:focus-within)) {
-      outline-color: var(--color-green-600);
     }
   }
   .sm\:-top-80 {
@@ -1064,12 +1039,6 @@
       line-height: var(--tw-leading, var(--text-7xl--line-height));
     }
   }
-  .sm\:text-sm\/6 {
-    @media (width >= 40rem) {
-      font-size: var(--text-sm);
-      line-height: calc(var(--spacing) * 6);
-    }
-  }
   .sm\:text-xl\/8 {
     @media (width >= 40rem) {
       font-size: var(--text-xl);
@@ -1103,11 +1072,6 @@
   .md\:h-8 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 8);
-    }
-  }
-  .md\:h-10 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 10);
     }
   }
   .md\:h-15 {
@@ -1287,6 +1251,9 @@
 .text-contrast {
   color: #35db31;
 }
+.text-negro {
+  color: #101010;
+}
 .bg-negro {
   background-color: #101010;
 }
@@ -1307,6 +1274,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 p, dd {
   font-family: "Hind", sans-serif;
+}
+.warning-box {
+  box-shadow: 0px 0px 6px 3px yellow;
+  transition: 0.5s;
+  transition-timing-function: ease;
+  outline: 0;
+}
+.error-text {
+  color: red;
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+.warning-text {
+  color: yellow;
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+.sucess-text {
+  color: green;
+  transition: 0.5s;
+  transition-timing-function: ease;
 }
 @property --tw-translate-x {
   syntax: "*";
