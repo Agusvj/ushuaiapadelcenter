@@ -5,6 +5,9 @@
 .text-contrast {
     color: #35db31;
 }
+.text-negro {
+    color: #101010;
+}
 
 .bg-negro {
     background-color: #101010;
@@ -38,4 +41,25 @@ h6 {
 p,
 dd {
     font-family: "Hind", sans-serif;
+}
+.warning-box{
+    box-shadow: 0px 0px 6px 3px yellow;
+    transition: 0.5s;
+    transition-timing-function: ease;
+    outline: 0;
+}
+.error-text{
+    color:red;
+    transition: 0.5s;
+    transition-timing-function: ease;
+}
+.warning-text{
+    color:yellow;
+    transition: 0.5s;
+    transition-timing-function: ease;
+}
+.sucess-text{
+    color:green;
+    transition: 0.5s;
+    transition-timing-function: ease;
 }

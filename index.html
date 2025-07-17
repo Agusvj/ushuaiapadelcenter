@@ -500,22 +500,24 @@
         action="#"
         method="POST"
         class="justify-center items-center  mt-6 w-full  px-20 lg:px-25 xl:px-45 2xl:px-55  z-8 "
+        id="formulario"
       >
         
           <div >
             <label
               for="first-name "
-              class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-[#fafafa] "
+              class="block text-md/6 font-semibold text-center text-shadow-lg/65 mt-3.5 text-[#fafafa] "
               >Tu nombre</label
             >
-            <div class="mt-2.5">
+            <div class="mt-2.5 ">
               <input
                 type="text"
                 name="first-name"
                 id="first-name"
                 autocomplete="given-name"
-                class="block w-full rounded-md bg-white  py-2 text-base text-[#fafafa] outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-600"
+                class="block w-full rounded-md bg-white  py-2 text-base text-negro text-center   placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600 "
               />
+              <div class="text-center "></div>
             </div>
           </div>
           <!--
@@ -529,12 +531,12 @@
           <div>
             <label
               for="phone-number"
-              class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-[#fafafa]"
+              class="block text-md/6 font-semibold text-center text-shadow-lg/65 mt-3.5 text-[#fafafa]"
               >Número de Teléfono</label
             >
             <div class="mt-2.5">
               <div
-                class="flex rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-green-600"
+                class=""
               >
                 <div
                   class=" focus-within:relative"
@@ -543,21 +545,24 @@
                   type="text"
                   name="phone-number"
                   id="phone-number"
-                  class="block min-w-0 grow py-1.5   text-base text-[#fafafa] placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-                  placeholder="  2901-123456"
+                  class="block w-full rounded-md bg-white  py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600" 
+                  placeholder="2901-123456"
                 />
-              
+                <div class="text-center"></div>
+                
             </div>
           </div>
           <div>
-            <label for="email" class="block text-center text-sm/6 font-semibold text-white">Email</label>
+            <label for="email" class="block text-center text-sm/6 font-semibold text-[#fafafa] mt-3.5">Email</label>
             <div class="mt-2.5">
-              <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" />
+              <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md bg-white  py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600" />
+              <div class="text-center"></div>
             </div>
+            <div class="text-center"></div>
           <div >
             <label
               for="message"
-              class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-[#fafafa]"
+              class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-[#fafafa] mt-3.5"
               >Tu duda o mensaje</label
             >
             <div class="mt-2.5">
@@ -565,8 +570,9 @@
                 name="message"
                 id="message"
                 rows="4"
-                class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-[#fafafa] outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-600"
+                class="block w-full rounded-md bg-white  py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600"
               ></textarea>
+              <div class="text-center"></div>
             </div>
           </div>
           <!--
@@ -583,7 +589,7 @@
         </label>
       </div>
       -->
-          <div class="mt-10 text-center">
+          <div class="mt-5 text-center">
             <button
               type="submit"
               id="enviar"
@@ -591,6 +597,7 @@
             >
               Enviar
             </button>
+            <div id="respuesta"></div>
           </div>
         
       </form>
