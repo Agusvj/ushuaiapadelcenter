@@ -4,7 +4,6 @@ const mobileMenu = document.getElementById("mobileMenu");
 const backgroundBackdrop = document.getElementById("backgroundBackdrop");
 //FORM
 
-
 console.log(buttonOpen);
 
 buttonOpen.addEventListener("click", () => {
@@ -19,6 +18,7 @@ buttonClose.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
 
+//CARRUSEL
 let carrusel = document.getElementById("carrusel");
 let indexImagenActual = 0;
 const cantidadDeImagenes = carrusel.children.length;
@@ -29,8 +29,7 @@ setInterval(function () {
     indexImagenActual = 0;
   }
   carrusel.style.transform = `translateX(-${indexImagenActual * 100}%)`;
-}, 4000);
-
+}, 8000);
 
 //VALIDACIONES FORM
 const f_name = document.getElementById("first-name");
@@ -43,80 +42,79 @@ let mail_valido = false;
 let name_valido = false;
 let num_valido = false;
 let msg_valido = false;
+f_submit.addEventListener("submit", () => {
+  if (vNombre === false) {
+    console.log("ERROR");
+  }
+});
 
-
-
-const validarCampoCompleto = (mensaje, campo) => {
-  if(campo.value.trim().length === 0){
-    campo.classList.add("warning-box");
-    campo.nextElementSibling.classList.add("warning-text");
-    campo.nextElementSibling.innerText= mensaje;
-    if(campo === f_name){
-        name_valido=false;
-    }else if(campo === f_number){
-        num_valido = false;
-    }else if(campo === f_msg){
-        msg_valido = false;
-    }
-  }else{
-    campo.classList.remove("warning-box");
-    campo.nextElementSibling.classList.remove("warning-text");
-    campo.nextElementSibling.innerText= "";
-    if(campo === f_name){
-        name_valido=true;
-    }else if(campo === f_number){
-        num_valido = true;
-    }else if(campo === f_msg){
-        msg_valido = true;
-    }
+function vNombre() {
+  if (f_input_name.value < 3) {
+    return false;
   }
 }
+
+const validarCampoCompleto = (mensaje, campo) => {
+  if (campo.value.trim().length === 0) {
+    campo.classList.add("warning-box");
+    campo.nextElementSibling.classList.add("warning-text");
+    campo.nextElementSibling.innerText = mensaje;
+    if (campo === f_name) {
+      name_valido = false;
+    } else if (campo === f_number) {
+      num_valido = false;
+    } else if (campo === f_msg) {
+      msg_valido = false;
+    }
+  } else {
+    campo.classList.remove("warning-box");
+    campo.nextElementSibling.classList.remove("warning-text");
+    campo.nextElementSibling.innerText = "";
+    if (campo === f_name) {
+      name_valido = true;
+    } else if (campo === f_number) {
+      num_valido = true;
+    } else if (campo === f_msg) {
+      msg_valido = true;
+    }
+  }
+};
 
 const validarMail = (mensaje, campo) => {
   const regex = new RegExp(/^[\w\.-]+@[\w\.-]+\.\w{2,}$/);
-  if(campo.value.trim().length === 0 || !regex.test(campo.value) ){
+  if (campo.value.trim().length === 0 || !regex.test(campo.value)) {
     campo.classList.add("warning-box");
     campo.nextElementSibling.classList.add("warning-text");
-    campo.nextElementSibling.innerText= mensaje;
+    campo.nextElementSibling.innerText = mensaje;
     mail_valido = false;
-    
-  }else{
+  } else {
     campo.classList.remove("warning-box");
     campo.nextElementSibling.classList.remove("warning-text");
-    campo.nextElementSibling.innerText= "";
-    mail_valido=true;
-    
-    
+    campo.nextElementSibling.innerText = "";
+    mail_valido = true;
   }
-}
+};
 
-form.addEventListener("submit" , (e) => {
-  e.preventDefault()
-  validarCampoCompleto("Debe introducir su nombre",f_name );
-  validarCampoCompleto("Debe introducir su numero de teléfono",f_number );
-  validarCampoCompleto("Envienos el motivo de su consulta",f_msg );
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  validarCampoCompleto("Debe introducir su nombre", f_name);
+  validarCampoCompleto("Debe introducir su numero de teléfono", f_number);
+  validarCampoCompleto("Envienos el motivo de su consulta", f_msg);
   validarMail("Debe introducir un E-Mail válido", f_email);
   const respuesta = document.getElementById("respuesta");
-  if(mail_valido && name_valido && num_valido && msg_valido) { 
-      respuesta.innerText="";
-      respuesta.classList.add("success-text");
-      respuesta.classList.remove("error-text");
-      form.submit();
-      respuesta.innerText="Enviado con exito";
-    }else{
-      respuesta.innerText="";
-      respuesta.classList.add("error-text");
-      respuesta.classList.remove("success-text");
-      respuesta.innerText="Complete todos los campos antes de enviar";
-    }
-})
-  
- 
-      
-  
-
-
-
+  if (mail_valido && name_valido && num_valido && msg_valido) {
+    respuesta.innerText = "";
+    respuesta.classList.add("success-text");
+    respuesta.classList.remove("error-text");
+    form.submit();
+    respuesta.innerText = "Enviado con exito";
+  } else {
+    respuesta.innerText = "";
+    respuesta.classList.add("error-text");
+    respuesta.classList.remove("success-text");
+    respuesta.innerText = "Complete todos los campos antes de enviar";
+  }
+});
 
 /*
     field.classList.remove("focus:outline-green-600");
@@ -125,7 +123,7 @@ form.addEventListener("submit" , (e) => {
     field.classList.remove("focus:outline-2");
     */
 
-    /*
+/*
 f_name.addEventListener("input", (e) => validarCampoCompleto("Debe introducir su nombre", e));
 f_number.addEventListener("input", (e) => validarCampoCompleto("Debe introducir su numero de teléfono", e));
 f_msg.addEventListener("input", (e) => validarCampoCompleto("Envienos el motivo de su consulta", e));
