@@ -4,7 +4,6 @@ const mobileMenu = document.getElementById("mobileMenu");
 const backgroundBackdrop = document.getElementById("backgroundBackdrop");
 //FORM
 
-
 console.log(buttonOpen);
 
 buttonOpen.addEventListener("click", () => {
@@ -19,6 +18,7 @@ buttonClose.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
 
+//CARRUSEL
 let carrusel = document.getElementById("carrusel");
 let indexImagenActual = 0;
 const cantidadDeImagenes = carrusel.children.length;
@@ -29,8 +29,7 @@ setInterval(function () {
     indexImagenActual = 0;
   }
   carrusel.style.transform = `translateX(-${indexImagenActual * 100}%)`;
-}, 4000);
-
+}, 8000);
 
 //VALIDACIONES FORM
 const f_input_name = document.getElementById("first-name");
@@ -39,16 +38,14 @@ const f_input_email = document.getElementById("email");
 const f_input_msg = document.getElementById("message");
 const f_submit = document.getElementById("enviar");
 
-
-f_submit.addEventListener("submit" , () =>{
-  if(vNombre===false){
-    console.log("ERROR")
+f_submit.addEventListener("submit", () => {
+  if (vNombre === false) {
+    console.log("ERROR");
   }
-})
+});
 
-function vNombre (){
-  if(f_input_name.value < 3){
-    return false
+function vNombre() {
+  if (f_input_name.value < 3) {
+    return false;
   }
-
 }
