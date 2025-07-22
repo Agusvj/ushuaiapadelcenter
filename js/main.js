@@ -110,9 +110,9 @@ form.addEventListener("submit", (e) => {
     fetch('https://webhook.site/e30ca0ab-21e4-467c-abf7-e541de97a390',{ //sitio de prueba, los datos se envian bien 👍
       method: 'POST',
       body: formData
-      
     })
     .finally(()=>{
+    form.reset();
     f_submit.disabled = false;
     f_submit.textContent = "Enviar";
     f_submit.classList.remove("disabled-btn");
