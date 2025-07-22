@@ -120,8 +120,8 @@ form.addEventListener("submit", (e) => {
       text: "Enviado con exito ✅",
       duration: 3000,
       close: true,
-      gravity: "bottom", // "top" o "bottom"
-      position: "right", // "left", "center" o "right"
+      gravity: "bottom", 
+      position: "right", 
       backgroundColor: "#27AB00",
       stopOnFocus: true,
     }).showToast();
