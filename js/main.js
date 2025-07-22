@@ -103,39 +103,53 @@ form.addEventListener("submit", (e) => {
   validarMail("Debe introducir un E-Mail válido", f_email);
   const respuesta = document.getElementById("respuesta");
   if (mail_valido && name_valido && num_valido && msg_valido) {
+    f_submit.disabled = true;
+    f_submit.textContent = "Enviando...";
+    f_submit.classList.add("disabled-btn");
+    const formData = new FormData(e.target);
+    fetch('https://webhook.site/e30ca0ab-21e4-467c-abf7-e541de97a390',{ //sitio de prueba, los datos se envian bien 👍
+      method: 'POST',
+      body: formData
+      
+    })
+    .finally(()=>{
+    f_submit.disabled = false;
+    f_submit.textContent = "Enviar";
+    f_submit.classList.remove("disabled-btn");
+    Toastify({
+      text: "Enviado con exito ✅",
+      duration: 3000,
+      close: true,
+      gravity: "bottom", // "top" o "bottom"
+      position: "right", // "left", "center" o "right"
+      backgroundColor: "#27AB00",
+      stopOnFocus: true,
+    }).showToast();
+    /*
     respuesta.innerText = "";
     respuesta.classList.add("success-text");
     respuesta.classList.remove("error-text");
-    form.submit();
     respuesta.innerText = "Enviado con exito";
+    */
+    })
+    
   } else {
+    Toastify({
+      text: "Complete todos los campos antes de enviar ⛔",
+      duration: 3000,
+      close: true,
+      gravity: "bottom", // "top" o "bottom"
+      position: "right", // "left", "center" o "right"
+      backgroundColor: "#D30000",
+      stopOnFocus: true,
+    }).showToast();
+    /*
     respuesta.innerText = "";
     respuesta.classList.add("error-text");
     respuesta.classList.remove("success-text");
     respuesta.innerText = "Complete todos los campos antes de enviar";
+    */
   }
 });
 
-/*
-    field.classList.remove("focus:outline-green-600");
-    field.classList.remove("placeholder:text-gray-400");
-    field.classList.remove("focus:outline-offset-1");
-    field.classList.remove("focus:outline-2");
-    */
 
-/*
-f_name.addEventListener("input", (e) => validarCampoCompleto("Debe introducir su nombre", e));
-f_number.addEventListener("input", (e) => validarCampoCompleto("Debe introducir su numero de teléfono", e));
-f_msg.addEventListener("input", (e) => validarCampoCompleto("Envienos el motivo de su consulta", e));
-//f_email.addEventListener("blur", (e) => validarMail("Debe introducir un E-Mail válido", e));
-f_email.addEventListener("input", (e) => validarMail("Debe introducir un E-Mail válido", e));
-
-form.addEventListener("input" , () => {
-      if(mail_valido && name_valido && num_valido && msg_valido) {
-      
-      f_submit.disabled = false;
-    }else{
-      f_submit.disabled = true;
-    }
-})
-*/

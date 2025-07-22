@@ -58,8 +58,18 @@ dd {
     transition: 0.5s;
     transition-timing-function: ease;
 }
-.sucess-text{
+.success-text{
     color:green;
     transition: 0.5s;
     transition-timing-function: ease;
+}
+
+.bg-cta {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+       url("/imgs/cta.webp");
+    background-position: center;
+    background-size: cover;
+}
+.disabled-btn{
+    color:gray
 }
