@@ -405,6 +405,15 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-\[70vh\] {
+    height: 70vh;
+  }
+  .h-\[85vh\] {
+    height: 85vh;
+  }
+  .h-\[100vh\] {
+    height: 100vh;
+  }
   .h-auto {
     height: auto;
   }
@@ -699,6 +708,9 @@
   }
   .py-15 {
     padding-block: calc(var(--spacing) * 15);
+  }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
   }
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
