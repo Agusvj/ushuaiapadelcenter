@@ -45,7 +45,7 @@ dd {
 }
 
 .warning-box {
-    box-shadow: 0px 0px 6px 3px yellow;
+    box-shadow: 0px 0px 6px yellow;
     transition: 0.5s;
     transition-timing-function: ease;
     outline: 0;
@@ -63,8 +63,26 @@ dd {
     transition-timing-function: ease;
 }
 
-.sucess-text {
-    color: green;
+.success-text {
+    color: #00eb00;
     transition: 0.5s;
     transition-timing-function: ease;
+}
+
+.bg-cta {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/imgs/cta.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-contacto {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/imgs/contacto.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+.disabled-btn {
+    color: rgb(90, 90, 90)
 }
