@@ -5,6 +5,7 @@
 .text-contrast {
     color: #35db31;
 }
+
 .text-negro {
     color: #101010;
 }
@@ -17,7 +18,7 @@
     background-color: #090b70;
 }
 
-.bg-azul:hover {
+a.bg-azul:hover {
     background-color: #2022a3;
     transition: all 0.3s;
 }
@@ -42,24 +43,28 @@ p,
 dd {
     font-family: "Hind", sans-serif;
 }
-.warning-box{
+
+.warning-box {
     box-shadow: 0px 0px 6px 3px yellow;
     transition: 0.5s;
     transition-timing-function: ease;
     outline: 0;
 }
-.error-text{
-    color:red;
+
+.error-text {
+    color: red;
     transition: 0.5s;
     transition-timing-function: ease;
 }
-.warning-text{
-    color:yellow;
+
+.warning-text {
+    color: yellow;
     transition: 0.5s;
     transition-timing-function: ease;
 }
-.sucess-text{
-    color:green;
+
+.sucess-text {
+    color: green;
     transition: 0.5s;
     transition-timing-function: ease;
 }
