@@ -25,7 +25,7 @@ a.bg-azul:hover {
 
 .bg-heroImg {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("/imgs/cancha.jpg");
+        url("/imgs/pelotas2.png");
     background-position: center;
     background-size: cover;
 }
@@ -78,7 +78,7 @@ dd {
 
 .bg-contacto {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("/imgs/contacto.webp");
+        url("/imgs/jugando1.png");
     background-position: center;
     background-size: cover;
 }
