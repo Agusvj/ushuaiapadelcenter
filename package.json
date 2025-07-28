@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "toastify-js": "^1.12.0"
   },
   "name": "ushuaiapadelcenter",
   "version": "1.0.0",

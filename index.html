@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ushuaia Padel Center</title>
     <link href="./src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./node_modules/toastify-js/src/toastify.css"
+    />
+    <script
+      type="text/javascript"
+      src="./node_modules/toastify-js/src/toastify.js"
+    ></script>
   </head>
   <body>
     <header class="fixed inset-x-0 top-0 z-50 bg-azul">
@@ -122,8 +131,10 @@
       </div>
     </header>
 
-    <div class="relative isolate pt-14 bg-heroImg lg:h-[100vh]">
-      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+    <div class="relative isolate bg-heroImg lg:h-[100vh] h-[85vh]">
+      <div
+        class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 lg:h-[100vh] h-[85vh] flex flex-col justify-center items-center"
+      >
         <div class="text-center">
           <h1
             class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl"
@@ -268,7 +279,6 @@
           <div class="overflow-hidden sm:max-w-[500px] sm:max-h-[750px] justify-self-center ">
             <div
               id="carrusel"
-             
               class="flex w-full transition-transform duration-1000 ease-in-out"
             >
               <div class="relative min-w-full">
@@ -289,7 +299,7 @@
                   </div>
                 </div>
               </div>
-              <div class="relative  min-w-full ">
+              <div class="relative min-w-full">
                 <img
                   src="./imgs/conf.jpeg"
                   class="w-full h-full object-cover"
@@ -307,7 +317,7 @@
                   </div>
                 </div>
               </div>
-              <div class="relative  min-w-full ">
+              <div class="relative min-w-full">
                 <img
                   src="./imgs/tienda 2.png"
                   class="w-full h-full object-cover"
@@ -325,7 +335,7 @@
                   </div>
                 </div>
               </div>
-              <div class="relative  min-w-full">
+              <div class="relative min-w-full">
                 <img
                   src="./imgs/paleta5.png"
                   class="w-full h-full object-cover"
@@ -348,30 +358,25 @@
         </div>
       </div>
     </section>
-     <!--SECCION SERVICIOS-->
+    <!--SECCION SERVICIOS-->
 
     <!--CTA-->
     <section
-      class="bg-[url(/imgs/cta.webp)] z-10 items-center justify-center bg-cover bg-center relative flex"
+      class="bg-cta z-10 items-center justify-center bg-cover bg-center relative flex"
     >
-      <div  id="turnos" class="bg-sky-700/30 z-5 absolute w-full h-full inset-0"></div>
       <div class="mx-auto max-w-7xl z-6">
-        <div
-          class="relative isolate overflow-hidden px-6  pt-10 pb-38  md:pt-12 lg:flex  lg:pt-20  lg:pb-45"
-        >
+        <div class="relative isolate px-6 py-15 lg:py-15 xl:py-24 lg:flex">
           <div
-            class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto  lg:py-12  justify-center justify-items-center items-center z-10"
+            class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto justify-center justify-items-center items-center z-10"
           >
             <h2
-              class="text-5xl  pb-20 font-semibold tracking-tight text-balance text-[#fafafa]  text-shadow-lg/65"
+              class="text-6xl pb-2 font-semibold tracking-tight text-balance text-[#fafafa] md:whitespace-nowrap"
             >
-              ¡Viví el pádel al máximo!
+              ¡Viví el padel al máximo!
             </h2>
-            <p class=" text-contrast text-2xl text-pretty text-[#fafafa] text-shadow-lg/85">
-              Reservá tu cancha y sumate a una experiencia única
-            </p>
+
             <div
-              class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"
+              class="mt-5 flex items-center justify-center gap-x-6 lg:justify-start"
             >
               <a
                 href="#"
@@ -386,10 +391,11 @@
     <!--CTA-->
 
     <!--UBICACION-->
-    
-    <section class="relative bg-negro  grid lg:grid-cols-2 z-1 isolate overflow-hidden px-6 pt-10  pb-14  md:pt-12   lg:pt-20  lg:pb-35 items-center justify-center ">
-      
-          <div
+
+    <section
+      class="relative bg-negro grid lg:grid-cols-2 z-1 isolate overflow-hidden px-5 lg:px-15 py-14 items-center justify-center"
+    >
+      <div
         class="absolute inset-0 top-40 pointer-events-none -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         aria-hidden="true"
       >
@@ -418,193 +424,159 @@
         ></div>
       </div>
 
-          <div
-            class=" z-1  text-center  lg:mx-0 lg:py-32"
-          >
-            <h2
-              class="text-center text-4xl md:text-5xl  py-6 font-semibold tracking-tight text-balance text-[#fafafa] "
-            >
-              ¿Dónde estamos?
-            </h2>
-            <p class="text-center text-contrast mt-3  md:text-2xl text-pretty text-[#fafafa]">
-              Perito Francisco Moreno 1565
-            </p>
-            <p class="mt-3 md:text-2xl text-pretty text-[#fafafa] justify-center items-center text-center justify-items-center">
-              <img src="/imgs/bondi-blanco.webp" class="fill-blue-500 h-10 md:h-15 px-1 inline-flex rounded-1xl"> <img src="/imgs/linea_A.webp" class="h-5 md:h-8 px-1 inline-flex rounded-1xl ">  <img src="/imgs/linea_D.webp" class="h-5 md:h-8 px-1 inline-flex rounded-1xl"> <br> <br> Parada <img src="/imgs/parada.webp" class="h-3 md:h-5 px-1 inline-flex rounded-1xl">
-            </p>
-            
-          </div>
-          <div class="mt-3 z-1  lg:mt-0  justify-items-center">
-            <iframe
-              class="rounded-3xl  max-w-full"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18399.63930540179!2d-68.27949614812759!3d-54.79833576656913!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c22c11f3e9ec7%3A0x1fbf5a745077571!2sPerito%20Francisco%20Moreno%201565%2C%20V9410KSZ%20Ushuaia%2C%20Tierra%20del%20Fuego%2C%20Argentina!5e0!3m2!1sen!2sus!4v1752242396101!5m2!1sen!2sus"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+      <div class="z-1 text-center lg:text-left align-text lg:mx-0">
+        <h2
+          class="text-center lg:text-left text-5xl md:text-6xl py-3 font-semibold tracking-tight text-balance text-[#fafafa]"
+        >
+          ¿Dónde estamos?
+        </h2>
+        <p
+          class="text-lg font-medium my-4 text-pretty text-contrast sm:text-xl/8"
+        >
+          Perito Francisco Moreno 1565
+        </p>
+        <p
+          class="text-1xl text-pretty text-[#fafafa] justify-center items-center text-center lg:text-left justify-items-center"
+        >
+          <img
+            src="/imgs/bondi-blanco.webp"
+            class="fill-blue-500 h-8 md:h-6 inline-flex rounded-1xl"
+          />
+          <img
+            src="/imgs/linea_A.webp"
+            class="h-5 md:h-6 inline-flex rounded-1xl"
+          />
+          <img
+            src="/imgs/linea_D.webp"
+            class="h-5 md:h-6 inline-flex rounded-1xl"
+          />
+          <img
+            src="/imgs/parada.webp"
+            class="h-3 md:h-6 inline-flex rounded-1xl"
+          />
+        </p>
+      </div>
+      <div class="z-1 lg:mt-0 justify-items-center md:justify-items-end">
+        <iframe
+          class="rounded-1xl max-w-full md:justify-items-end lg:w-full"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18399.63930540179!2d-68.27949614812759!3d-54.79833576656913!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c22c11f3e9ec7%3A0x1fbf5a745077571!2sPerito%20Francisco%20Moreno%201565%2C%20V9410KSZ%20Ushuaia%2C%20Tierra%20del%20Fuego%2C%20Argentina!5e0!3m2!1sen!2sus!4v1752242396101!5m2!1sen!2sus"
+          width="600"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </section>
     <!--UBICACION-->
 
     <!--CONTACTO-->
     <section
-      class="relative bg-negro  pt-6 pb-12 lg:pt-20 z-1 lg:pb-35  grid md:grid-cols-2  px-6  isolate overflow max-w-full justify-items-center "
+      class="relative bg-negro bg-contacto px-5 py-15 grid lg:grid-cols-2 lg:px-15 lg:py-20 isolate overflow max-w-full justify-items-center"
     >
-     <div
-        class="absolute inset-0 top-40 pointer-events-none -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        aria-hidden="true"
+      <div
+        class="z-8 flex flex-col justify-items-center self-center lg:justify-self-start lg:place-items-start h-full w-full"
       >
-        <div
-          class="absolute inset-0 pointer-events-none -z-10 left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#00ff26] to-[#1100ff] opacity-10 sm:left-[calc(50%-30rem)] sm:w-288.75"
-          style="
-            clip-path: polygon(
-              20% 0%, 
-              35% 5%, 
-              50% 0%, 
-              65% 5%, 
-              80% 0%, 
-              100% 20%, 
-              95% 35%, 
-              100% 50%, 
-              95% 65%, 
-              100% 80%, 
-              80% 100%, 
-              65% 95%, 
-              50% 100%, 
-              35% 95%, 
-              20% 100%, 
-              0% 80%, 
-              5% 65%, 
-              0% 50%, 
-              5% 35%, 
-              0% 20%
-            );
-          "
-        ></div>
-      </div>
-
-      <div class=" max-w-100 z-8 lg:mt-10 items-center align-middle justify-items-center md:content-center">
         <h1
-          class="text-5xl  lg:text-6xl font-semibold tracking-tight text-shadow-lg/65 text-[#fafafa] "
+          class="text-5xl lg:text-6xl font-semibold tracking-tight text-[#fafafa] text-center lg:text-start"
         >
           Contactanos
         </h1>
-        <p class="text-lg/8 pt-10 text-contrast text-[#fafafa] text-shadow-lg/65 text-center">
+        <p
+          class="text-lg/8 pt-10 text-contrast text-center lg:text-left text-[#fafafa] mb-10 lg:mb-0"
+        >
           Completá el formulario y sumate al club de pádel más austral del mundo
         </p>
       </div>
       <form
-        action="#"
-        method="POST"
-        class="justify-center items-center  mt-6 w-full  px-20 lg:px-25 xl:px-45 2xl:px-55  z-8 "
+        class="justify-items-center lg:justify-self-end flex-wrap z-8 w-full"
         id="formulario"
       >
-        
-          <div >
-            <label
-              for="first-name "
-              class="block text-md/6 font-semibold text-center text-shadow-lg/65 mt-3.5 text-[#fafafa] "
-              >Tu nombre</label
-            >
-            <div class="mt-2.5 ">
+        <div class="flex flex-col w-full">
+          <label
+            for="first-name"
+            class="block text-md/6 font-semibold text-left tracking-wide text-[#fafafa]"
+            >NOMBRE</label
+          >
+          <div class="flex flex-col w-full">
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              autocomplete="given-name"
+              class="block rounded-md bg-white w-full py-2 text-base text-negro text-center placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600"
+              placeholder="Tu nombre"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col w-full">
+          <label
+            for="phone-number"
+            class="block text-md/6 font-semibold text-left tracking-wide mt-3.5 text-[#fafafa]"
+            >TELÉFONO
+          </label>
+          <div class="flex flex-col w-full">
+            <div class="flex flex-col w-full">
               <input
                 type="text"
-                name="first-name"
-                id="first-name"
-                autocomplete="given-name"
-                class="block w-full rounded-md bg-white  py-2 text-base text-negro text-center   placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600 "
+                name="phone-number"
+                id="phone-number"
+                class="block w-full rounded-md bg-white tracking-wide py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600"
+                placeholder="2901-123456"
               />
-              <div class="text-center "></div>
             </div>
-          </div>
-          <!--
-      <div class="sm:col-span-2 md:col-span-1">
-        <label for="email" class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-white">Email</label>
-        <div class="mt-2.5">
-          <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md bg-white px-3.5 py-2 text-base  text-white outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600" />
-        </div>
-      </div>
-      -->
-          <div>
-            <label
-              for="phone-number"
-              class="block text-md/6 font-semibold text-center text-shadow-lg/65 mt-3.5 text-[#fafafa]"
-              >Número de Teléfono</label
-            >
-            <div class="mt-2.5">
-              <div
-                class=""
-              >
-                <div
-                  class=" focus-within:relative"
-                ></div>
-                <input
-                  type="text"
-                  name="phone-number"
-                  id="phone-number"
-                  class="block w-full rounded-md bg-white  py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600" 
-                  placeholder="2901-123456"
-                />
-                <div class="text-center"></div>
-                
-            </div>
-          </div>
-          <div>
-            <label for="email" class="block text-center text-sm/6 font-semibold text-[#fafafa] mt-3.5">Email</label>
-            <div class="mt-2.5">
-              <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md bg-white  py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600" />
-              <div class="text-center"></div>
-            </div>
-            <div class="text-center"></div>
-          <div >
-            <label
-              for="message"
-              class="block text-md/6 font-semibold text-center text-shadow-lg/65 text-[#fafafa] mt-3.5"
-              >Tu duda o mensaje</label
-            >
-            <div class="mt-2.5">
-              <textarea
-                name="message"
-                id="message"
-                rows="4"
-                class="block w-full rounded-md bg-white  py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600"
-              ></textarea>
-              <div class="text-center"></div>
-            </div>
-          </div>
-          <!--
-      <div class="flex gap-x-4 sm:col-span-2">
-        <div class="flex h-6 items-center">
-          <div class="group relative inline-flex w-8 shrink-0 rounded-full bg-gray-200 p-px inset-ring inset-ring-gray-900/5 outline-offset-2 outline-indigo-600 transition-colors duration-200 ease-in-out has-checked:bg-indigo-600 has-focus-visible:outline-2">
-            <span class="size-4 rounded-full bg-white shadow-xs ring-1 ring-gray-900/5 transition-transform duration-200 ease-in-out group-has-checked:translate-x-3.5"></span>
-            <input type="checkbox" class="absolute inset-0 appearance-none focus:outline-hidden" aria-label="Agree to policies" id="agree-to-policies" name="agree-to-policies" />
           </div>
         </div>
-        <label class="text-sm/6 text-gray-600" for="agree-to-policies">
-          By selecting this, you agree to our
-          <a href="#" class="font-semibold whitespace-nowrap text-indigo-600">privacy policy</a>.
-        </label>
-      </div>
-      -->
-          <div class="mt-5 text-center">
-            <button
-              type="submit"
-              id="enviar"
-              class="rounded-md bg-azul  px-3.5 py-4.5 text-center text-md font-semibold text-[#fafafa] shadow-xs hover:bg-azul-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Enviar
-            </button>
-            <div id="respuesta"></div>
+        <div class="flex flex-col w-full">
+          <label
+            for="email"
+            class="block text-left tracking-wide text-md/6 font-semibold text-[#fafafa] mt-3.5"
+            >E-MAIL</label
+          >
+          <div class="flex flex-col w-full">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              class="block w-full rounded-md bg-white py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600"
+              placeholder="email@email.com"
+            />
           </div>
-        
+        </div>
+        <div class="flex flex-col w-full">
+          <label
+            for="message"
+            class="block text-md/6 font-semibold tracking-wide text-left text-[#fafafa] mt-3.5"
+            >TU MENSAJE</label
+          >
+          <div class="flex flex-col w-full">
+            <textarea
+              name="message"
+              id="message"
+              rows="4"
+              class="block w-full rounded-md bg-white py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600"
+              placeholder="Tu mensaje aquí"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="mt-5 lg:justify-self-start">
+          <button
+            type="submit"
+            id="enviar"
+            class="rounded-md bg-azul block lg:justify-self-end tracking-wide px-3.5 py-4.5 mb-2.5 text-center justify-self-center text-md font-semibold text-[#fafafa] shadow-xs hover:bg-azul-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            Enviar
+          </button>
+          <div id="respuesta"></div>
+        </div>
       </form>
     </section>
 
- 
-
+    <!--BTN WPP-->
     <a href="" class="fixed right-10 bottom-10 z-50"
       ><img
         src="./imgs/whatsapp.png"
@@ -613,9 +585,8 @@
         height="50px"
     /></a>
 
-
     <!--SECCION REDES SOCIALES-->
-     <div class="flex flex-col lg:flex-row">
+    <div class="flex flex-col lg:flex-row">
       <div class="mx-auto w-full">
         <div
           class="bg-black h-auto relative isolate overflow-hidden px-0  shadow-2xl sm:px-16 md:py-8 md:flex md:justify-center md:items-center "
@@ -987,8 +958,15 @@
         </div>
       </div>
     </div>
-<!--SECCION REDES SOCIALES-->
+    <!--SECCION REDES SOCIALES-->
 
+    <a href="" class="fixed right-10 bottom-10 z-50"
+      ><img
+        src="./imgs/whatsapp.png"
+        alt="Boton Whatsapp"
+        width="50px"
+        height="50px"
+    /></a>
 
     <!--FOOTER-->
     <footer class="bg-azul  py-10 px-6">
@@ -1027,7 +1005,7 @@
       
        
     </footer>
-<!--FOOTER-->
+    <!--FOOTER-->
     <script src="./js/main.js"></script>
   </body>
 </html>
