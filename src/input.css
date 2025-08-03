@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
+html {
+    scroll-behavior: smooth;
+}
+
+#ubicacion,
+#redes {
+    scroll-margin-top: 30px;
+}
+
+#contacto {
+    scroll-margin-top: 100px;
+}
 
 .text-contrast {
     color: #35db31;
@@ -23,9 +35,14 @@ a.bg-azul:hover {
     transition: all 0.3s;
 }
 
+button.bg-azul:hover {
+    background-color: #2022a3;
+    transition: all 0.3s;
+}
+
 .bg-heroImg {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("/imgs/pelotas2.png");
+        url("/imgs/heroImg.webp");
     background-position: center;
     background-size: cover;
 }
@@ -76,9 +93,16 @@ dd {
     background-size: cover;
 }
 
+.bg-cta-tienda {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/imgs/innovacta.webp");
+    background-position: center;
+    background-size: cover;
+}
+
 .bg-contacto {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("/imgs/jugando1.png");
+        url("/imgs/jugando1.webp");
     background-position: center;
     background-size: cover;
 }

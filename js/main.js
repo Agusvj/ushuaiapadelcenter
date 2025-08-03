@@ -1,14 +1,11 @@
 const buttonOpen = document.getElementById("buttonOpen");
 const buttonClose = document.getElementById("buttonClose");
 const mobileMenu = document.getElementById("mobileMenu");
+const menuLinks = document.querySelectorAll(".menu-link");
 const backgroundBackdrop = document.getElementById("backgroundBackdrop");
 //FORM
 
-console.log(buttonOpen);
-
 buttonOpen.addEventListener("click", () => {
-  console.log("entre");
-
   mobileMenu.classList.toggle("hidden");
   backgroundBackdrop.classList.toggle("hidden");
 });
@@ -16,6 +13,13 @@ buttonOpen.addEventListener("click", () => {
 buttonClose.addEventListener("click", () => {
   backgroundBackdrop.classList.toggle("hidden");
   mobileMenu.classList.toggle("hidden");
+});
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    backgroundBackdrop.classList.toggle("hidden");
+    mobileMenu.classList.toggle("hidden");
+  });
 });
 
 //CARRUSEL
@@ -107,32 +111,31 @@ form.addEventListener("submit", (e) => {
     f_submit.textContent = "Enviando...";
     f_submit.classList.add("disabled-btn");
     const formData = new FormData(e.target);
-    fetch('https://webhook.site/e30ca0ab-21e4-467c-abf7-e541de97a390',{ //sitio de prueba, los datos se envian bien 👍
-      method: 'POST',
-      body: formData
-    })
-    .finally(()=>{
-    form.reset();
-    f_submit.disabled = false;
-    f_submit.textContent = "Enviar";
-    f_submit.classList.remove("disabled-btn");
-    Toastify({
-      text: "Enviado con exito ✅",
-      duration: 3000,
-      close: true,
-      gravity: "bottom", 
-      position: "right", 
-      backgroundColor: "#27AB00",
-      stopOnFocus: true,
-    }).showToast();
-    /*
+    fetch("https://webhook.site/e30ca0ab-21e4-467c-abf7-e541de97a390", {
+      //sitio de prueba, los datos se envian bien 👍
+      method: "POST",
+      body: formData,
+    }).finally(() => {
+      form.reset();
+      f_submit.disabled = false;
+      f_submit.textContent = "Enviar";
+      f_submit.classList.remove("disabled-btn");
+      Toastify({
+        text: "Enviado con exito ✅",
+        duration: 3000,
+        close: true,
+        gravity: "bottom",
+        position: "right",
+        backgroundColor: "#27AB00",
+        stopOnFocus: true,
+      }).showToast();
+      /*
     respuesta.innerText = "";
     respuesta.classList.add("success-text");
     respuesta.classList.remove("error-text");
     respuesta.innerText = "Enviado con exito";
     */
-    })
-    
+    });
   } else {
     Toastify({
       text: "Complete todos los campos antes de enviar ⛔",
@@ -151,5 +154,3 @@ form.addEventListener("submit", (e) => {
     */
   }
 });
-
-

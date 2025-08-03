@@ -23,17 +23,17 @@
       >
         <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
+            <span class="sr-only">Ushuaia Padel Center</span>
             <img class="h-8 w-auto" src="./imgs/logo-large.png" alt="" />
           </a>
         </div>
         <div class="flex lg:hidden">
           <button
             type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
             id="buttonOpen"
           >
-            <span class="sr-only">Open main menu</span>
+            <span class="sr-only">Abrir Menu</span>
             <svg
               class="size-6"
               fill="none"
@@ -52,12 +52,26 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm/6 font-semibold text-white">Servicios</a>
-          <a href="#" class="text-sm/6 font-semibold text-white">Contacto</a>
-          <a href="#" class="text-sm/6 font-semibold text-white"
-            >¿Donde Estamos?</a
+          <a
+            href="#tienda"
+            class="text-sm/6 font-semibold text-white hover:scale-110 hover:opacity-90 transition-all duration-200"
+            >Servicios</a
           >
-          <a href="#" class="text-sm/6 font-semibold text-white">Redes</a>
+          <a
+            href="#contacto"
+            class="text-sm/6 font-semibold text-white hover:scale-110 hover:opacity-90 transition-all duration-200"
+            >Contacto</a
+          >
+          <a
+            href="#ubicacion"
+            class="text-sm/6 font-semibold text-white hover:scale-110 hover:opacity-90 transition-all duration-200"
+            >¿Dónde Estamos?</a
+          >
+          <a
+            href="#redes"
+            class="text-sm/6 font-semibold text-white hover:scale-110 hover:opacity-90 transition-all duration-200"
+            >Redes</a
+          >
         </div>
       </nav>
       <!-- Mobile menu, show/hide based on menu open state. -->
@@ -83,7 +97,7 @@
               id="buttonClose"
               id="buttonClose"
             >
-              <span class="sr-only">Close menu</span>
+              <span class="sr-only">Cerrar Menu</span>
               <svg
                 class="size-6"
                 fill="none"
@@ -105,24 +119,24 @@
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
                 <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  >Product</a
+                  href="#tienda"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 menu-link"
+                  >Servicios</a
                 >
                 <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  >Features</a
+                  href="#contacto"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 menu-link"
+                  >Contacto</a
                 >
                 <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  >Marketplace</a
+                  href="#ubicacion"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 menu-link"
+                  >¿Dónde Estamos?</a
                 >
                 <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  >Company</a
+                  href="#redes"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 menu-link"
+                  >Redes</a
                 >
               </div>
             </div>
@@ -144,43 +158,49 @@
           <p
             class="mt-8 text-lg font-medium text-pretty text-contrast sm:text-xl/8"
           >
-            El club de Padel mas austral del mundo
+            El club de Pádel mas austral del mundo
           </p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href="#"
+              href="https://wa.me/5492901307871?text=Hola!%20Hay%20turnos%20libres?"
+              target="_blank"
               class="rounded-md bg-azul px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-azul-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >Quiero jugar</a
             >
-            <a href="#" class="text-sm/6 font-semibold text-white"
+            <a href="#tienda" class="text-sm/6 font-semibold text-white"
               >Servicios <span aria-hidden="true">→</span></a
             >
           </div>
         </div>
       </div>
     </div>
-     <!--SECCION SERVICIOS-->
-    <section id="tienda"   class="overflow-hidden bg-negro py-24 sm:py-32">
+
+    <!--SECCION SERVICIOS-->
+    <section id="tienda" class="overflow-hidden bg-negro py-24 sm:py-32">
       <div class="mx-auto max-w-7xl md:px-10 lg:px-20">
         <div
-          class="mx-auto w-full grid ms:max-w-[500px] max-w-full grid-cols-1 gap-x-1 gap-y-16 sm:gap-y-20  md:grid-cols-2 px-6 sm:px-0"
+          class="mx-auto w-full grid ms:max-w-[500px] max-w-full grid-cols-1 gap-x-1 gap-y-16 sm:gap-y-20 md:grid-cols-2 px-6 sm:px-0"
         >
           <div class="sm:max-w-[500px] sm:max-h-[750px] justify-self-center">
             <div>
-              <h2 class="text-contrast font-semibold text-[14px]  md:text-base ">SERVICIOS</h2>
+              <h2 class="text-contrast text-[14px] md:text-sm tracking-widest">
+                SERVICIOS
+              </h2>
               <p
                 class="mt-4 sm:mt-2 lg:mt-8 text-4xl font-semibold tracking-tight text-pretty text-[#fafafa]"
               >
                 Todo en un solo lugar
               </p>
-              
+
               <!--listado de servicios-->
               <dl
-                class="mt-8 sm:mt-2 lg:mt-8 max-w-xl space-y-8  text-contrast lg:max-w-none"
+                class="mt-8 sm:mt-2 lg:mt-8 max-w-xl space-y-8 text-contrast lg:max-w-none"
               >
-       <!--alquiler de canchas-->
+                <!--alquiler de canchas-->
                 <div class="relative pl-9">
-                  <dt class="inline-flex gap-2 text-xl  lg:text-2xl items-center font-semibold text-[#fafafa]">
+                  <dt
+                    class="inline-flex gap-2 text-xl lg:text-2xl items-center font-semibold text-[#fafafa]"
+                  >
                     <!-- Ícono de calendario (Heroicons solid) -->
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -198,17 +218,21 @@
                       />
                     </svg>
 
-                    Alquiler de Canchas <img src="./imgs/flecha.png" class="w-5 h-5" alt="Icono">
+                    Alquiler de Canchas
+                    <img src="./imgs/flecha.png" class="w-5 h-5" alt="Icono" />
                   </dt>
-                  <dd class="mt-6 md:mt-2 lg:mt-6 text-lg lg:text-xl leading-relaxed">
-                    Reserva tu espacio en nuestras canchas
-                    profesionales.
+                  <dd
+                    class="mt-3 md:mt-2 lg:mt-1 text-lg lg:text-xl leading-relaxed"
+                  >
+                    Reserva tu espacio en nuestras canchas profesionales.
                   </dd>
-                </div> 
+                </div>
 
                 <!--clases de padel-->
                 <div class="relative pl-9">
-                  <dt class="inline-flex gap-2 text-xl  lg:text-2xl items-center font-semibold text-[#fafafa]">
+                  <dt
+                    class="inline-flex gap-2 text-xl lg:text-2xl items-center font-semibold text-[#fafafa]"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -220,17 +244,23 @@
                       />
                     </svg>
 
-                    Clases de Padel <img src="./imgs/flecha.png" class="w-5 h-5"  alt="Icono"> 
+                    Clases de Padel
+                    <img src="./imgs/flecha.png" class="w-5 h-5" alt="Icono" />
                   </dt>
-                  <dd class="mt-6  md:mt-2 lg:mt-6 text-lg lg:text-xl leading-relaxed">
-                    Lunes a Sabado de  08:00am a 10:00pm <br> Clases para todos los niveles.
+                  <dd
+                    class="mt-3 md:mt-2 lg:mt-1 text-lg lg:text-xl leading-relaxed"
+                  >
+                    Lunes a Sabado de 08:00am a 10:00pm <br />
+                    Clases para todos los niveles.
                   </dd>
                 </div>
 
                 <!-- Tienda de productos -->
 
                 <div class="relative pl-9">
-                  <dt class="inline-flex gap-2 text-xl  lg:text-2xl items-center font-semibold text-[#fafafa]">
+                  <dt
+                    class="inline-flex gap-2 text-xl lg:text-2xl items-center font-semibold text-[#fafafa]"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -244,17 +274,24 @@
                       />
                     </svg>
 
-                    Productos <img src="./imgs/flecha.png" class="w-5 h-5" alt="Icono"> 
+                    Productos
+                    <img src="./imgs/flecha.png" class="w-5 h-5" alt="Icono" />
                   </dt>
-                  <dd class="mt-4 md:mt-2 lg:mt-6 text-lg lg:text-xl leading-relaxed">
-                    Accesorios y más. Equipate directamente en el complejo.
+                  <dd
+                    class="mt-3 md:mt-2 lg:mt-1 text-lg lg:text-xl leading-relaxed"
+                  >
+                    Accesorios y más. Equipate directamente
+                    <br />
+                    en el complejo.
                   </dd>
                 </div>
 
                 <!-- Confitería -->
 
                 <div class="relative pl-9">
-                  <dt class="inline-flex gap-2 text-xl  lg:text-2xl items-center font-semibold text-[#fafafa]">
+                  <dt
+                    class="inline-flex gap-2 text-xl lg:text-2xl items-center font-semibold text-[#fafafa]"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -266,9 +303,12 @@
                       />
                     </svg>
 
-                    Confitería <img src="./imgs/flecha.png" class="w-5 h-5"  alt="Icono"> 
+                    Confitería
+                    <img src="./imgs/flecha.png" class="w-5 h-5" alt="Icono" />
                   </dt>
-                  <dd class="mt-4 md:mt-2 lg:mt-6 text-lg lg:text-xl leading-relaxed">
+                  <dd
+                    class="mt-3 md:mt-2 lg:mt-1 text-lg lg:text-xl leading-relaxed"
+                  >
                     Relajate y disfrutá de snacks, bebidas y opciones
                     saludables.
                   </dd>
@@ -276,18 +316,22 @@
               </dl>
             </div>
           </div>
-          <div class="overflow-hidden sm:max-w-[500px] sm:max-h-[750px] justify-self-center ">
+          <div
+            class="overflow-hidden sm:max-w-[500px] sm:max-h-[650px] justify-self-center"
+          >
             <div
               id="carrusel"
               class="flex w-full transition-transform duration-1000 ease-in-out"
             >
               <div class="relative min-w-full">
                 <img
-                  src="./imgs/enfocar.png"
+                  src="./imgs/carrusel1.webp"
                   class="w-full h-full object-cover"
                   alt="canchas"
                 />
-                <div class="absolute inset-0 flex items-end justify-center">
+                <div
+                  class="absolute inset-0 flex items-end justify-center sm:max-h-[650px]"
+                >
                   <div
                     class="w-full mb-10 text-center bg-black/75 text-[#fafafa] px-4 py-2"
                   >
@@ -305,7 +349,9 @@
                   class="w-full h-full object-cover"
                   alt="confiteria"
                 />
-                <div class="absolute inset-0 flex items-end justify-center">
+                <div
+                  class="absolute inset-0 flex items-end justify-center sm:max-h-[650px]"
+                >
                   <div
                     class="w-full mb-10 text-center bg-black/75 text-[#fafafa] px-4 py-2"
                   >
@@ -319,33 +365,37 @@
               </div>
               <div class="relative min-w-full">
                 <img
-                  src="./imgs/tienda 2.png"
+                  src="./imgs/carrusel3.webp"
                   class="w-full h-full object-cover"
                   alt="tienda"
                 />
-                <div class="absolute inset-0 flex items-end justify-center">
+                <div
+                  class="absolute inset-0 flex items-end justify-center sm:max-h-[650px]"
+                >
                   <div
                     class="w-full mb-10 text-center bg-black/75 text-[#fafafa] px-4 py-2"
                   >
                     <h3 class="text-2xl font-semibold">Nuestra Tienda</h3>
 
                     <p class="sm:text-base lg:text-lg font-medium">
-                       Productos pensados para tu rendimiento y estilo
+                      Productos pensados para tu rendimiento y estilo
                     </p>
                   </div>
                 </div>
               </div>
               <div class="relative min-w-full">
                 <img
-                  src="./imgs/paleta5.png"
+                  src="./imgs/carrusel4.webp"
                   class="w-full h-full object-cover"
                   alt="clases de padel"
                 />
-                <div class="absolute inset-0 flex items-end justify-center">
+                <div
+                  class="absolute inset-0 flex items-end justify-center sm:max-h-[650px]"
+                >
                   <div
                     class="w-full mb-10 text-center bg-black/75 text-[#fafafa] px-4 py-2"
                   >
-                    <h3 class="text-2xl font-semibold">Clases de Padel</h3>
+                    <h3 class="text-2xl font-semibold">Clases de Pádel</h3>
 
                     <p class="text-base lg:text-lg font-medium">
                       Clases adaptadas a tu ritmo, edad y nivel
@@ -362,7 +412,7 @@
 
     <!--CTA-->
     <section
-      class="bg-cta z-10 items-center justify-center bg-cover bg-center relative flex"
+      class="bg-cta-tienda z-10 items-center justify-center bg-cover bg-center relative flex"
     >
       <div class="mx-auto max-w-7xl z-6">
         <div class="relative isolate px-6 py-15 lg:py-15 xl:py-24 lg:flex">
@@ -370,19 +420,27 @@
             class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto justify-center justify-items-center items-center z-10"
           >
             <h2
-              class="text-6xl pb-2 font-semibold tracking-tight text-balance text-[#fafafa] md:whitespace-nowrap"
+              class="lg:text-6xl md:text-5xl text-4xl pb-2 font-semibold tracking-tight text-balance text-[#fafafa] md:whitespace-nowrap"
             >
-              ¡Viví el padel al máximo!
+              Solo lo mejor, en Innova Padel.
             </h2>
 
             <div
               class="mt-5 flex items-center justify-center gap-x-6 lg:justify-start"
             >
               <a
-                href="#"
-                class="rounded-md bg-azul px-3.5 py-2.5 text-sm font-semibold text-[#fafafa] shadow-xs hover:bg-azul-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white mb-2"
-                >Reservá tu turno</a
+                href="https://www.instagram.com/innovapadelushuaia/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                class="text-white"
               >
+                <img
+                  class="w-10 h-10 inline-block hover:scale-110 hover:opacity-80 transition-all duration-200"
+                  src="./imgs/icons-Instg.png"
+                  alt="icono Instagram"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -393,7 +451,8 @@
     <!--UBICACION-->
 
     <section
-      class="relative bg-negro grid lg:grid-cols-2 z-1 isolate overflow-hidden px-5 lg:px-15 py-14 items-center justify-center"
+      class="relative bg-negro grid lg:grid-cols-2 z-1 isolate overflow-hidden px-5 lg:px-15 py-20 items-center justify-center"
+      id="ubicacion"
     >
       <div
         class="absolute inset-0 top-40 pointer-events-none -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -424,7 +483,7 @@
         ></div>
       </div>
 
-      <div class="z-1 text-center lg:text-left align-text lg:mx-0">
+      <div class="z-1 text-center lg:text-left align-text lg:mx-0 mb-8">
         <h2
           class="text-center lg:text-left text-5xl md:text-6xl py-3 font-semibold tracking-tight text-balance text-[#fafafa]"
         >
@@ -474,6 +533,7 @@
     <!--CONTACTO-->
     <section
       class="relative bg-negro bg-contacto px-5 py-15 grid lg:grid-cols-2 lg:px-15 lg:py-20 isolate overflow max-w-full justify-items-center"
+      id="contacto"
     >
       <div
         class="z-8 flex flex-col justify-items-center self-center lg:justify-self-start lg:place-items-start h-full w-full"
@@ -505,7 +565,7 @@
               name="first-name"
               id="first-name"
               autocomplete="given-name"
-              class="block rounded-md bg-white w-full py-2 text-base text-negro text-center placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600"
+              class="block rounded-md bg-white/60 w-full py-2 text-base text-negro text-center placeholder:text-black focus:outline-2 focus:outline-offset-1 focus:outline-blue-800"
               placeholder="Tu nombre"
             />
           </div>
@@ -523,7 +583,7 @@
                 type="text"
                 name="phone-number"
                 id="phone-number"
-                class="block w-full rounded-md bg-white tracking-wide py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600"
+                class="block w-full rounded-md bg-white/60 tracking-wide py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-black focus:outline-2 focus:outline-offset-1 focus:outline-blue-800"
                 placeholder="2901-123456"
               />
             </div>
@@ -541,7 +601,7 @@
               name="email"
               id="email"
               autocomplete="email"
-              class="block w-full rounded-md bg-white py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600"
+              class="block w-full rounded-md bg-white/60 py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-black focus:outline-2 focus:outline-offset-1 focus:outline-blue-800"
               placeholder="email@email.com"
             />
           </div>
@@ -557,7 +617,7 @@
               name="message"
               id="message"
               rows="4"
-              class="block w-full rounded-md bg-white py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-offset-1 focus:outline-green-600"
+              class="block w-full rounded-md bg-white/60 py-2 text-base text-negro text-center outline-1 -outline-offset-1 outline-gray-300 placeholder:text-black focus:outline-2 focus:outline-offset-1 focus:outline-blue-800"
               placeholder="Tu mensaje aquí"
             ></textarea>
           </div>
@@ -567,7 +627,7 @@
           <button
             type="submit"
             id="enviar"
-            class="rounded-md bg-azul block lg:justify-self-end tracking-wide px-3.5 py-4.5 mb-2.5 text-center justify-self-center text-md font-semibold text-[#fafafa] shadow-xs hover:bg-azul-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            class="rounded-md bg-azul px-3.5 py-2.5 text-base font-semibold text-[#fafafa] shadow-xs hover:bg-azul-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white mb-2 transition-all duration-200 hover:scale-105 cursor-pointer"
           >
             Enviar
           </button>
@@ -586,10 +646,10 @@
     /></a>
 
     <!--SECCION REDES SOCIALES-->
-    <div class="flex flex-col lg:flex-row">
+    <div class="flex flex-col lg:flex-row" id="redes">
       <div class="mx-auto w-full">
         <div
-          class="bg-black h-auto relative isolate overflow-hidden px-0  shadow-2xl sm:px-16 md:py-8 md:flex md:justify-center md:items-center "
+          class="bg-black h-auto relative isolate overflow-hidden px-0 shadow-2xl sm:px-16 md:py-8 md:flex md:justify-center md:items-center"
         >
           <svg
             viewBox="0 0 1024 1024"
@@ -611,238 +671,65 @@
             </defs>
           </svg>
           <div
-            class=" py-20 md:py-6 flex flex-col md:flex-row justify-center items-center gap-x-4 px-6 mx-auto max-w-5xl"
+            class="py-20 md:py-6 flex flex-col md:flex-row justify-center items-center gap-x-4 px-6 mx-auto max-w-5xl"
           >
-            
-              <div class="hidden  md:flex pt-3">
-                <blockquote
-                  class="instagram-media"
-                  data-instgrm-captioned
-                  data-instgrm-permalink="https://www.instagram.com/p/DFYYv0MPHgb/?utm_source=ig_embed&amp;utm_campaign=loading"
-                  data-instgrm-version="14"
-                  style="
-                    background: #fff;
-                    border: 0;
-                    border-radius: 3px;
-                    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
-                      0 1px 10px 0 rgba(0, 0, 0, 0.15);
-                    margin: 1px;
-                    max-width: 540px;
-                    min-width: 326px;
-                    padding: 0;
-                    width: 99.375%;
-                    width: -webkit-calc(100% - 2px);
-                    width: calc(100% - 2px);
-                  "
-                >
-                  <div style="padding: 16px">
-                    <a
-                      href="https://www.instagram.com/p/DFYYv0MPHgb/?utm_source=ig_embed&amp;utm_campaign=loading"
+            <div class="hidden md:flex pt-3">
+              <blockquote
+                class="instagram-media"
+                data-instgrm-captioned
+                data-instgrm-permalink="https://www.instagram.com/p/DFYYv0MPHgb/?utm_source=ig_embed&amp;utm_campaign=loading"
+                data-instgrm-version="14"
+                style="
+                  background: #fff;
+                  border: 0;
+                  border-radius: 3px;
+                  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
+                    0 1px 10px 0 rgba(0, 0, 0, 0.15);
+                  margin: 1px;
+                  max-width: 540px;
+                  min-width: 326px;
+                  padding: 0;
+                  width: 99.375%;
+                  width: -webkit-calc(100% - 2px);
+                  width: calc(100% - 2px);
+                "
+              >
+                <div style="padding: 16px">
+                  <a
+                    href="https://www.instagram.com/p/DFYYv0MPHgb/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    style="
+                      background: #ffffff;
+                      line-height: 0;
+                      padding: 0 0;
+                      text-align: center;
+                      text-decoration: none;
+                      width: 100%;
+                    "
+                    target="_blank"
+                  >
+                    <div
                       style="
-                        background: #ffffff;
-                        line-height: 0;
-                        padding: 0 0;
-                        text-align: center;
-                        text-decoration: none;
-                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
                       "
-                      target="_blank"
                     >
                       <div
                         style="
-                          display: flex;
-                          flex-direction: row;
-                          align-items: center;
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          flex-grow: 0;
+                          height: 40px;
+                          margin-right: 14px;
+                          width: 40px;
                         "
-                      >
-                        <div
-                          style="
-                            background-color: #f4f4f4;
-                            border-radius: 50%;
-                            flex-grow: 0;
-                            height: 40px;
-                            margin-right: 14px;
-                            width: 40px;
-                          "
-                        ></div>
-                        <div
-                          style="
-                            display: flex;
-                            flex-direction: column;
-                            flex-grow: 1;
-                            justify-content: center;
-                          "
-                        >
-                          <div
-                            style="
-                              background-color: #f4f4f4;
-                              border-radius: 4px;
-                              flex-grow: 0;
-                              height: 14px;
-                              margin-bottom: 6px;
-                              width: 100px;
-                            "
-                          ></div>
-                          <div
-                            style="
-                              background-color: #f4f4f4;
-                              border-radius: 4px;
-                              flex-grow: 0;
-                              height: 14px;
-                              width: 60px;
-                            "
-                          ></div>
-                        </div>
-                      </div>
-                      <div style="padding: 19% 0"></div>
-                      <div
-                        style="
-                          display: block;
-                          height: 50px;
-                          margin: 0 auto 12px;
-                          width: 50px;
-                        "
-                      >
-                        <svg
-                          width="50px"
-                          height="50px"
-                          viewBox="0 0 60 60"
-                          version="1.1"
-                          xmlns="https://www.w3.org/2000/svg"
-                          xmlns:xlink="https://www.w3.org/1999/xlink"
-                        >
-                          <g
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                          >
-                            <g
-                              transform="translate(-511.000000, -20.000000)"
-                              fill="#000000"
-                            >
-                              <g>
-                                <path
-                                  d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
-                                ></path>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <div style="padding-top: 8px">
-                        <div
-                          style="
-                            color: #3897f0;
-                            font-family: Arial, sans-serif;
-                            font-size: 14px;
-                            font-style: normal;
-                            font-weight: 550;
-                            line-height: 18px;
-                          "
-                        >
-                          Ver esta publicación en Instagram
-                        </div>
-                      </div>
-                      <div style="padding: 12.5% 0"></div>
-                      <div
-                        style="
-                          display: flex;
-                          flex-direction: row;
-                          margin-bottom: 14px;
-                          align-items: center;
-                        "
-                      >
-                        <div>
-                          <div
-                            style="
-                              background-color: #f4f4f4;
-                              border-radius: 50%;
-                              height: 12.5px;
-                              width: 12.5px;
-                              transform: translateX(0px) translateY(7px);
-                            "
-                          ></div>
-                          <div
-                            style="
-                              background-color: #f4f4f4;
-                              height: 12.5px;
-                              transform: rotate(-45deg) translateX(3px)
-                                translateY(1px);
-                              width: 12.5px;
-                              flex-grow: 0;
-                              margin-right: 14px;
-                              margin-left: 2px;
-                            "
-                          ></div>
-                          <div
-                            style="
-                              background-color: #f4f4f4;
-                              border-radius: 50%;
-                              height: 12.5px;
-                              width: 12.5px;
-                              transform: translateX(9px) translateY(-18px);
-                            "
-                          ></div>
-                        </div>
-                        <div style="margin-left: 8px">
-                          <div
-                            style="
-                              background-color: #f4f4f4;
-                              border-radius: 50%;
-                              flex-grow: 0;
-                              height: 20px;
-                              width: 20px;
-                            "
-                          ></div>
-                          <div
-                            style="
-                              width: 0;
-                              height: 0;
-                              border-top: 2px solid transparent;
-                              border-left: 6px solid #f4f4f4;
-                              border-bottom: 2px solid transparent;
-                              transform: translateX(16px) translateY(-4px)
-                                rotate(30deg);
-                            "
-                          ></div>
-                        </div>
-                        <div style="margin-left: auto">
-                          <div
-                            style="
-                              width: 0px;
-                              border-top: 8px solid #f4f4f4;
-                              border-right: 8px solid transparent;
-                              transform: translateY(16px);
-                            "
-                          ></div>
-                          <div
-                            style="
-                              background-color: #f4f4f4;
-                              flex-grow: 0;
-                              height: 12px;
-                              width: 16px;
-                              transform: translateY(-4px);
-                            "
-                          ></div>
-                          <div
-                            style="
-                              width: 0;
-                              height: 0;
-                              border-top: 8px solid #f4f4f4;
-                              border-left: 8px solid transparent;
-                              transform: translateY(-4px) translateX(8px);
-                            "
-                          ></div>
-                        </div>
-                      </div>
+                      ></div>
                       <div
                         style="
                           display: flex;
                           flex-direction: column;
                           flex-grow: 1;
                           justify-content: center;
-                          margin-bottom: 24px;
                         "
                       >
                         <div
@@ -852,7 +739,7 @@
                             flex-grow: 0;
                             height: 14px;
                             margin-bottom: 6px;
-                            width: 224px;
+                            width: 100px;
                           "
                         ></div>
                         <div
@@ -861,58 +748,234 @@
                             border-radius: 4px;
                             flex-grow: 0;
                             height: 14px;
-                            width: 144px;
+                            width: 60px;
                           "
-                        ></div></div
-                    ></a>
-                    <p
+                        ></div>
+                      </div>
+                    </div>
+                    <div style="padding: 19% 0"></div>
+                    <div
+                      style="
+                        display: block;
+                        height: 50px;
+                        margin: 0 auto 12px;
+                        width: 50px;
+                      "
+                    >
+                      <svg
+                        width="50px"
+                        height="50px"
+                        viewBox="0 0 60 60"
+                        version="1.1"
+                        xmlns="https://www.w3.org/2000/svg"
+                        xmlns:xlink="https://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          stroke="none"
+                          stroke-width="1"
+                          fill="none"
+                          fill-rule="evenodd"
+                        >
+                          <g
+                            transform="translate(-511.000000, -20.000000)"
+                            fill="#000000"
+                          >
+                            <g>
+                              <path
+                                d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
+                              ></path>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div style="padding-top: 8px">
+                      <div
+                        style="
+                          color: #3897f0;
+                          font-family: Arial, sans-serif;
+                          font-size: 14px;
+                          font-style: normal;
+                          font-weight: 550;
+                          line-height: 18px;
+                        "
+                      >
+                        Ver esta publicación en Instagram
+                      </div>
+                    </div>
+                    <div style="padding: 12.5% 0"></div>
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: row;
+                        margin-bottom: 14px;
+                        align-items: center;
+                      "
+                    >
+                      <div>
+                        <div
+                          style="
+                            background-color: #f4f4f4;
+                            border-radius: 50%;
+                            height: 12.5px;
+                            width: 12.5px;
+                            transform: translateX(0px) translateY(7px);
+                          "
+                        ></div>
+                        <div
+                          style="
+                            background-color: #f4f4f4;
+                            height: 12.5px;
+                            transform: rotate(-45deg) translateX(3px)
+                              translateY(1px);
+                            width: 12.5px;
+                            flex-grow: 0;
+                            margin-right: 14px;
+                            margin-left: 2px;
+                          "
+                        ></div>
+                        <div
+                          style="
+                            background-color: #f4f4f4;
+                            border-radius: 50%;
+                            height: 12.5px;
+                            width: 12.5px;
+                            transform: translateX(9px) translateY(-18px);
+                          "
+                        ></div>
+                      </div>
+                      <div style="margin-left: 8px">
+                        <div
+                          style="
+                            background-color: #f4f4f4;
+                            border-radius: 50%;
+                            flex-grow: 0;
+                            height: 20px;
+                            width: 20px;
+                          "
+                        ></div>
+                        <div
+                          style="
+                            width: 0;
+                            height: 0;
+                            border-top: 2px solid transparent;
+                            border-left: 6px solid #f4f4f4;
+                            border-bottom: 2px solid transparent;
+                            transform: translateX(16px) translateY(-4px)
+                              rotate(30deg);
+                          "
+                        ></div>
+                      </div>
+                      <div style="margin-left: auto">
+                        <div
+                          style="
+                            width: 0px;
+                            border-top: 8px solid #f4f4f4;
+                            border-right: 8px solid transparent;
+                            transform: translateY(16px);
+                          "
+                        ></div>
+                        <div
+                          style="
+                            background-color: #f4f4f4;
+                            flex-grow: 0;
+                            height: 12px;
+                            width: 16px;
+                            transform: translateY(-4px);
+                          "
+                        ></div>
+                        <div
+                          style="
+                            width: 0;
+                            height: 0;
+                            border-top: 8px solid #f4f4f4;
+                            border-left: 8px solid transparent;
+                            transform: translateY(-4px) translateX(8px);
+                          "
+                        ></div>
+                      </div>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+                        justify-content: center;
+                        margin-bottom: 24px;
+                      "
+                    >
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          margin-bottom: 6px;
+                          width: 224px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          width: 144px;
+                        "
+                      ></div></div
+                  ></a>
+                  <p
+                    style="
+                      color: #c9c8cd;
+                      font-family: Arial, sans-serif;
+                      font-size: 14px;
+                      line-height: 17px;
+                      margin-bottom: 0;
+                      margin-top: 8px;
+                      overflow: hidden;
+                      padding: 8px 0 7px;
+                      text-align: center;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                    "
+                  >
+                    <a
+                      href="https://www.instagram.com/p/DFYYv0MPHgb/?utm_source=ig_embed&amp;utm_campaign=loading"
                       style="
                         color: #c9c8cd;
                         font-family: Arial, sans-serif;
                         font-size: 14px;
+                        font-style: normal;
+                        font-weight: normal;
                         line-height: 17px;
-                        margin-bottom: 0;
-                        margin-top: 8px;
-                        overflow: hidden;
-                        padding: 8px 0 7px;
-                        text-align: center;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
+                        text-decoration: none;
                       "
+                      target="_blank"
+                      >Una publicación compartida de Ushuaia Padel Center
+                      (@ushuaiapadelcenter)</a
                     >
-                      <a
-                        href="https://www.instagram.com/p/DFYYv0MPHgb/?utm_source=ig_embed&amp;utm_campaign=loading"
-                        style="
-                          color: #c9c8cd;
-                          font-family: Arial, sans-serif;
-                          font-size: 14px;
-                          font-style: normal;
-                          font-weight: normal;
-                          line-height: 17px;
-                          text-decoration: none;
-                        "
-                        target="_blank"
-                        >Una publicación compartida de Ushuaia Padel Center
-                        (@ushuaiapadelcenter)</a
-                      >
-                    </p>
-                  </div>
-                </blockquote>
-                <script async src="//www.instagram.com/embed.js"></script>
-              </div>
-           
-              <div
-              class="flex flex-col justify-center text-center lg:text-left lg:py-32 px-6  w-full max-w-[320px] mx-auto"
+                  </p>
+                </div>
+              </blockquote>
+              <script async src="//www.instagram.com/embed.js"></script>
+            </div>
+
+            <div
+              class="flex flex-col justify-center text-center lg:text-left lg:py-32 px-6 w-full max-w-[320px] mx-auto"
             >
               <h1
-                class=" md:text-left text-center tracking-wider text-4xl font-semibold  text-balance text-white md:text-5xl"
+                class="md:text-left text-center tracking-wider text-4xl font-semibold text-balance text-white md:text-5xl"
               >
                 ¡Seguinos!
-            </h1>
-              <p class="md:text-left text-center tracking-wide mt-6 text-xl text-pretty text-[#35db31]">
-              Fotos, reels con nuestros amigos y mucho mas
+              </h1>
+              <p
+                class="md:text-left text-center tracking-wide mt-6 text-xl text-pretty text-[#35db31]"
+              >
+                Fotos, reels con nuestros amigos y mucho mas
               </p>
-              <div class="py-4  flex justify-center md:justify-start items-center gap-6">
+              <div
+                class="py-4 flex justify-center md:justify-start items-center gap-6"
+              >
                 <a
                   href="https://www.instagram.com/ushuaiapadelcenter/"
                   target="_blank"
@@ -935,20 +998,20 @@
                 >
                   <img
                     src="./imgs/icons-faceb.png"
-                    alt=""
+                    alt="facebook logo"
                     class="w-10 h-10 inline-block hover:scale-110 hover:opacity-80 transition-all duration-200"
                   />
                 </a>
                 <a
+                  href="https://wa.me/5492901307871?text=Hola!%20Hay%20turnos%20libres?"
                   target="_blank"
                   rel="noopener"
                   aria-label="Whatsapp"
                   class="text-white"
-                  href=""
                 >
                   <img
                     src="./imgs/icons-wpp.png"
-                    alt=""
+                    alt="whatsapp icon"
                     class="w-10 h-10 inline-block hover:scale-110 hover:opacity-80 transition-all duration-200"
                   />
                 </a>
@@ -960,7 +1023,39 @@
     </div>
     <!--SECCION REDES SOCIALES-->
 
-    <a href="" class="fixed right-10 bottom-10 z-50"
+    <section
+      class="bg-cta z-10 items-center justify-center bg-cover bg-center relative flex"
+    >
+      <div class="mx-auto max-w-7xl z-6">
+        <div class="relative isolate px-6 py-15 lg:py-15 xl:py-24 lg:flex">
+          <div
+            class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto justify-center justify-items-center items-center z-10"
+          >
+            <h2
+              class="lg:text-6xl md:text-5xl text-4xl pb-2 font-semibold tracking-tight text-balance text-[#fafafa] md:whitespace-nowrap"
+            >
+              ¡Viví el pádel al máximo!
+            </h2>
+
+            <div
+              class="mt-5 flex items-center justify-center gap-x-6 lg:justify-start"
+            >
+              <a
+                href="https://wa.me/5492901307871?text=Hola!%20Hay%20turnos%20libres?"
+                target="_blank"
+                class="rounded-md bg-azul px-3.5 py-2.5 text-sm font-semibold text-[#fafafa] shadow-xs hover:bg-azul-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white mb-2 transition-all duration-200 hover:scale-105"
+                >Reservá tu turno</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a
+      href="https://wa.me/5492901307871?text=Hola!%20Hay%20turnos%20libres?"
+      target="_blank"
+      class="fixed right-10 bottom-10 z-50"
       ><img
         src="./imgs/whatsapp.png"
         alt="Boton Whatsapp"
@@ -969,41 +1064,60 @@
     /></a>
 
     <!--FOOTER-->
-    <footer class="bg-azul  py-10 px-6">
-
-
-      <div class="px-8 md:px-20 flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-x-2 gap-y-8 text-lg text-white text-center w-full max-w-screen-lg mx-auto py-6">
-  <span >Lunes a Domingo: 9:00 - 22:00 </span>
-  <span class="hidden md:inline">|</span>
-  <span class=" items-baseline md:whitespace-nowrap inline-flex md:items-center"><img src="./imgs/pin.png" alt="pin" class="w-5 h-5">Perito Francisco Moreno 1565</span>
-  <span class=" hidden md:inline">|</span>
-  <span>Ushuaia - Tierra del Fuego - Argentina</span>
-  <span class=" hidden md:inline">|</span>
-  <span class=" md:whitespace-nowrap inline-flex  items-center"><img src="./imgs/tel.png" alt="tel" class="w-6 h-6">Tel: (2901) 2222222</span>
-</div>
-     
-      <div class="flex flex-col md:flex-row justify-center items-center gap-10 text-center py-8 mb-8 ">
-            
-           <span class="text-lg text-white tracking-widest">  <a href="#turnos" class="hover:text-[#35db31] transition "
-                >TURNOS</a
-              > </span>
-                <span class="text-lg font-bold text-white tracking-widest">  <a href="#tienda" class="hover:text-[#35db31] transition"
-                >TIENDA</a> </span>
-                <span class="text-lg text-white tracking-widest">  <a href="#tienda" class="hover:text-[#35db31] transition"
-                >CLASES</a
-              >  </span>
-        </div>
-
-        <div class="flex justify-center items-center mb-6"><span> <img class="h-8 w-auto" src="./imgs/logo-large.png" alt="" />
-              </span></div>
-      <div class="flex justify-center items-center mb-6">
-        <span class="text-sm text-white ">©2025  Ushuaia Padel Center 
-              </span>
-       
+    <footer class="bg-azul py-10 px-6">
+      <div
+        class="px-8 md:px-10 flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-x-2 gap-y-8 text-lg text-white text-center w-full py-6"
+      >
+        <span>Lunes a Domingo: 9:00 - 22:00 </span>
+        <span class="hidden md:inline">|</span>
+        <span
+          class="items-baseline md:whitespace-nowrap inline-flex md:items-center"
+          ><img src="./imgs/pin.png" alt="pin" class="w-5 h-5" />Perito
+          Francisco Moreno 1565</span
+        >
+        <span class="hidden md:inline">|</span>
+        <span>Ushuaia - Tierra del Fuego - Argentina</span>
+        <span class="hidden md:inline">|</span>
+        <span class="md:whitespace-nowrap inline-flex items-center"
+          ><img src="./imgs/tel.png" alt="tel" class="w-6 h-6" />Tel: +54 (2901)
+          307871</span
+        >
       </div>
 
-      
-       
+      <div
+        class="flex flex-col md:flex-row justify-center items-center gap-10 text-center py-8 mb-8"
+      >
+        <span class="text-lg text-white tracking-widest">
+          <a
+            href="https://wa.me/5492901307871?text=Hola!%20Hay%20turnos%20libres?"
+            target="_blank"
+            class="hover:text-[#35db31] transition"
+            >TURNOS</a
+          >
+        </span>
+        <span class="text-lg text-white tracking-widest">
+          <a
+            href="https://www.instagram.com/innovapadelushuaia/"
+            target="_blank"
+            class="hover:text-[#35db31] transition"
+            >TIENDA</a
+          >
+        </span>
+        <span class="text-lg text-white tracking-widest">
+          <a
+            href="https://wa.me/5492901307871?text=Hola!%20Turnos%20para%20clases%20libres?"
+            target="_blank"
+            class="hover:text-[#35db31] transition"
+            >CLASES</a
+          >
+        </span>
+      </div>
+
+      <div class="flex justify-center items-center mb-6">
+        <span>
+          <img class="h-10 w-auto" src="./imgs/logo-large.png" alt="" />
+        </span>
+      </div>
     </footer>
     <!--FOOTER-->
     <script src="./js/main.js"></script>
