@@ -1,54 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 #ubicacion,
 #redes {
-    scroll-margin-top: 30px;
+  scroll-margin-top: 30px;
 }
 
 #contacto {
-    scroll-margin-top: 100px;
+  scroll-margin-top: 100px;
 }
 
 .text-contrast {
-    color: #35db31;
+  color: #35db31;
 }
 
 .text-negro {
-    color: #101010;
+  color: #101010;
 }
 
 .bg-negro {
-    background-color: #101010;
+  background-color: #101010;
 }
 
 .bg-gris {
-    background-color: #616161;
+  background-color: #616161;
 }
 
 .bg-azul {
-    background-color: #090b70;
+  background-color: #090b70;
 }
 
 a.bg-azul:hover {
-    background-color: #2022a3;
-    transition: all 0.3s;
+  background-color: #2022a3;
+  transition: all 0.3s;
 }
 
 button.bg-azul:hover {
-    background-color: #2022a3;
-    transition: all 0.3s;
+  background-color: #2022a3;
+  transition: all 0.3s;
 }
 
 .bg-heroImg {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("/imgs/heroImg.webp");
-    background-position: center;
-    background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/imgs/heroImg.webp");
+  background-position: center;
+  background-size: cover;
 }
 
 h1,
@@ -57,60 +57,60 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 p,
 dd {
-    font-family: "Hind", sans-serif;
+  font-family: "Hind", sans-serif;
 }
 
 .warning-box {
-    box-shadow: 0px 0px 6px yellow;
-    transition: 0.5s;
-    transition-timing-function: ease;
-    outline: 0;
+  box-shadow: 0px 0px 6px yellow;
+  transition: 0.5s;
+  transition-timing-function: ease;
+  outline: 0;
 }
 
 .error-text {
-    color: red;
-    transition: 0.5s;
-    transition-timing-function: ease;
+  color: red;
+  transition: 0.5s;
+  transition-timing-function: ease;
 }
 
 .warning-text {
-    color: yellow;
-    transition: 0.5s;
-    transition-timing-function: ease;
+  color: yellow;
+  transition: 0.5s;
+  transition-timing-function: ease;
 }
 
 .success-text {
-    color: #00eb00;
-    transition: 0.5s;
-    transition-timing-function: ease;
+  color: #00eb00;
+  transition: 0.5s;
+  transition-timing-function: ease;
 }
 
 .bg-cta {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("/imgs/cta.webp");
-    background-position: center;
-    background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/imgs/cta.webp");
+  background-position: center;
+  background-size: cover;
 }
 
 .bg-cta-tienda {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("/imgs/innovacta.webp");
-    background-position: center;
-    background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/imgs/innovacta.webp");
+  background-position: center;
+  background-size: cover;
 }
 
 .bg-contacto {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("/imgs/jugando1.webp");
-    background-position: center;
-    background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/imgs/jugando1.webp");
+  background-position: center;
+  background-size: cover;
 }
 
 .disabled-btn {
-    color: rgb(90, 90, 90)
+  color: rgb(90, 90, 90);
 }
