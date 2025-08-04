@@ -580,9 +580,6 @@
       background-color: color-mix(in oklab, var(--color-black) 75%, transparent);
     }
   }
-  .bg-gray-700 {
-    background-color: var(--color-gray-700);
-  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -621,6 +618,9 @@
   }
   .object-cover {
     object-fit: cover;
+  }
+  .object-left {
+    object-position: left;
   }
   .p-1\.5 {
     padding: calc(var(--spacing) * 1.5);
