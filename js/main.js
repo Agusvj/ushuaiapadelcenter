@@ -110,6 +110,9 @@ form.addEventListener("submit", (e) => {
     f_submit.disabled = true;
     f_submit.textContent = "Enviando...";
     f_submit.classList.add("disabled-btn");
+    f_submit.classList.remove("bg-azul");
+    f_submit.classList.remove("cursor-pointer");
+    f_submit.classList.add("bg-gris");
     const formData = new FormData(e.target);
     fetch("https://webhook.site/e30ca0ab-21e4-467c-abf7-e541de97a390", {
       //sitio de prueba, los datos se envian bien 👍
@@ -120,6 +123,9 @@ form.addEventListener("submit", (e) => {
       f_submit.disabled = false;
       f_submit.textContent = "Enviar";
       f_submit.classList.remove("disabled-btn");
+      f_submit.classList.add("cursor-pointer");
+      f_submit.classList.remove("bg-gris");
+      f_submit.classList.add("bg-azul");
       Toastify({
         text: "Enviado con exito ✅",
         duration: 3000,
@@ -129,12 +135,6 @@ form.addEventListener("submit", (e) => {
         backgroundColor: "#27AB00",
         stopOnFocus: true,
       }).showToast();
-      /*
-    respuesta.innerText = "";
-    respuesta.classList.add("success-text");
-    respuesta.classList.remove("error-text");
-    respuesta.innerText = "Enviado con exito";
-    */
     });
   } else {
     Toastify({
@@ -146,11 +146,5 @@ form.addEventListener("submit", (e) => {
       backgroundColor: "#D30000",
       stopOnFocus: true,
     }).showToast();
-    /*
-    respuesta.innerText = "";
-    respuesta.classList.add("error-text");
-    respuesta.classList.remove("success-text");
-    respuesta.innerText = "Complete todos los campos antes de enviar";
-    */
   }
 });
