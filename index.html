@@ -14,11 +14,7 @@
       type="text/javascript"
       src="./node_modules/toastify-js/src/toastify.js"
     ></script>
-      <link
-      rel="icon"
-      type="image/x-icon"
-      href="imgs/icono2.ico"
-    />
+    <link rel="icon" type="image/x-icon" href="imgs/icono2.ico" />
   </head>
   <body>
     <header class="fixed inset-x-0 top-0 z-50 bg-azul">
@@ -163,7 +159,7 @@
           <p
             class="mt-8 text-lg font-medium text-pretty text-contrast sm:text-xl/8"
           >
-            El club de Pádel mas austral del mundo
+            El club de Pádel más austral del mundo
           </p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <a
@@ -319,17 +315,23 @@
                   </dd>
                 </div>
 
-
                 <!--gym-->
-                  <div class="relative pl-9">
+                <div class="relative pl-9">
                   <dt
                     class="inline-flex gap-2 text-xl lg:text-2xl items-center font-semibold text-[#fafafa]"
                   >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 absolute top-1 left-1 text-contrast ">
-  <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
-</svg>
-
-
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="size-6 absolute top-1 left-1 text-contrast"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
 
                     Gimnasio
                     <img src="./imgs/flecha.png" class="w-5 h-5" alt="Icono" />
@@ -337,7 +339,8 @@
                   <dd
                     class="mt-3 md:mt-2 lg:mt-1 text-lg lg:text-xl leading-relaxed"
                   >
-                   Activá tu energía en el gym del club. Equipado, cómodo y listo para tu próxima meta.
+                    Activá tu energía en el gym del club. Equipado, cómodo y
+                    listo para tu próxima meta.
                   </dd>
                 </div>
               </dl>
@@ -353,7 +356,7 @@
               <div class="relative min-w-full">
                 <img
                   src="./imgs/carrusel1.webp"
-                  class="w-full  md:h-[650px]  object-cover"
+                  class="w-full md:h-[650px] object-cover"
                   alt="canchas"
                 />
                 <div
@@ -366,13 +369,14 @@
 
                     <p class="sm:text-base lg:text-lg font-medium">
                       Tu partido empieza acá.
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="relative min-w-full">
                 <img
                   src="./imgs/carrusel2.webp"
-                  class="w-full h-full md:h-[650px]  object-cover"
+                  class="w-full h-full md:h-[650px] object-cover"
                   alt="confiteria"
                 />
                 <div
@@ -392,7 +396,7 @@
               <div class="relative min-w-full">
                 <img
                   src="./imgs/carrusel3.webp"
-                  class="w-full  h-full md:h-[650px]  object-cover object-left"
+                  class="w-full h-full md:h-[650px] object-cover object-left"
                   alt="tienda"
                 />
                 <div
@@ -404,7 +408,7 @@
                     <h3 class="text-2xl font-semibold">Nuestra Tienda</h3>
 
                     <p class="sm:text-base lg:text-lg font-medium">
-                       Productos para tu rendimiento y estilo.
+                      Productos para tu rendimiento y estilo.
                     </p>
                   </div>
                 </div>
@@ -412,7 +416,7 @@
               <div class="relative min-w-full">
                 <img
                   src="./imgs/carrusel4.webp"
-                  class="w-full  md:h-[650px]  object-cover"
+                  class="w-full md:h-[650px] object-cover"
                   alt="clases de padel"
                 />
                 <div
@@ -429,10 +433,10 @@
                   </div>
                 </div>
               </div>
-               <div class="relative min-w-full">
+              <div class="relative min-w-full">
                 <img
                   src="./imgs/carrusel5.webp"
-                  class="w-full  md:h-[650px]  object-cover"
+                  class="w-full md:h-[650px] object-cover"
                   alt="clases de padel"
                 />
                 <div
@@ -598,7 +602,9 @@
       <form
         class="justify-items-center lg:justify-self-end flex-wrap z-8 w-full"
         id="formulario"
+        method="POST"
       >
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
         <div class="flex flex-col w-full">
           <label
             for="first-name"
@@ -672,6 +678,13 @@
             <div class="text-center mt-2.5"></div>
           </div>
         </div>
+
+        <input
+          type="checkbox"
+          name="botcheck"
+          class="hidden"
+          style="display: none"
+        />
 
         <div class="mt-5 lg:justify-self-start">
           <button
