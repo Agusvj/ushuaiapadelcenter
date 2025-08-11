@@ -114,28 +114,46 @@ form.addEventListener("submit", (e) => {
     f_submit.classList.remove("cursor-pointer");
     f_submit.classList.add("bg-gris");
     const formData = new FormData(e.target);
-    fetch("https://webhook.site/e30ca0ab-21e4-467c-abf7-e541de97a390", {
-      //sitio de prueba, los datos se envian bien 👍
+    let data = JSON.stringify(formData);
+    fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData,
-    }).finally(() => {
-      form.reset();
-      f_submit.disabled = false;
-      f_submit.textContent = "Enviar";
-      f_submit.classList.remove("disabled-btn");
-      f_submit.classList.add("cursor-pointer");
-      f_submit.classList.remove("bg-gris");
-      f_submit.classList.add("bg-azul");
-      Toastify({
-        text: "Enviado con exito ✅",
-        duration: 3000,
-        close: true,
-        gravity: "bottom",
-        position: "right",
-        backgroundColor: "#27AB00",
-        stopOnFocus: true,
-      }).showToast();
-    });
+      body: data,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then(() => {
+        form.reset();
+        f_submit.disabled = false;
+        f_submit.textContent = "Enviar";
+        f_submit.classList.remove("disabled-btn");
+        f_submit.classList.add("cursor-pointer");
+        f_submit.classList.remove("bg-gris");
+        f_submit.classList.add("bg-azul");
+        console.log(formData);
+        Toastify({
+          text: "Enviado con exito ✅",
+          duration: 3000,
+          close: true,
+          gravity: "bottom",
+          position: "right",
+          backgroundColor: "#27AB00",
+          stopOnFocus: true,
+        }).showToast();
+      })
+      .catch((err) => {
+        console.log(err);
+        Toastify({
+          text: "Algo salió mal 🫣, intente de nuevo",
+          duration: 3000,
+          close: true,
+          gravity: "bottom", // "top" o "bottom"
+          position: "right", // "left", "center" o "right"
+          backgroundColor: "#D30000",
+          stopOnFocus: true,
+        }).showToast();
+      });
   } else {
     Toastify({
       text: "Complete todos los campos antes de enviar ⛔",
