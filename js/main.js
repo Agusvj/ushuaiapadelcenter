@@ -4,7 +4,7 @@ const mobileMenu = document.getElementById("mobileMenu");
 const menuLinks = document.querySelectorAll(".menu-link");
 const backgroundBackdrop = document.getElementById("backgroundBackdrop");
 //FORM
-
+const botcheck = document.getElementById("control");
 buttonOpen.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
   backgroundBackdrop.classList.toggle("hidden");
@@ -99,6 +99,14 @@ const validarMail = (mensaje, campo) => {
   }
 };
 
+form.addEventListener("change", () => {
+  if (botcheck.checked) {
+    f_submit.disabled = true;
+  } else {
+    f_submit.disabled = false;
+  }
+});
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   validarCampoCompleto("Debe introducir su nombre", f_name);
@@ -107,54 +115,108 @@ form.addEventListener("submit", (e) => {
   validarMail("Debe introducir un E-Mail válido", f_email);
   const respuesta = document.getElementById("respuesta");
   if (mail_valido && name_valido && num_valido && msg_valido) {
+    const captcha_value = document.querySelector(
+      "textarea[name=h-captcha-response]"
+    ).value;
+    if (!captcha_value) {
+      Toastify({
+        text: "Valide el CAPTCHA antes de enviar 🫣",
+        duration: 3000,
+        close: true,
+        gravity: "bottom",
+        position: "right",
+        backgroundColor: "#BA9B00",
+        stopOnFocus: true,
+      }).showToast();
+
+      return;
+    }
     f_submit.disabled = true;
     f_submit.textContent = "Enviando...";
     f_submit.classList.add("disabled-btn");
     f_submit.classList.remove("bg-azul");
     f_submit.classList.remove("cursor-pointer");
     f_submit.classList.add("bg-gris");
-    const formData = new FormData(e.target);
-    let data = JSON.stringify(formData);
+    const data = new FormData(e.target);
+    let formData = {};
+    data.forEach((value, key) => {
+      formData[key] = value;
+    });
+
+    let json = JSON.stringify(formData);
+    console.log(json);
+
     fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: data,
+      body: JSON.stringify(formData),
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
     })
-      .then(() => {
+      .then((response) => {
         form.reset();
+        if (response.status === 200) {
+          Toastify({
+            text: "Enviado con exito ✅",
+            duration: 3000,
+            close: true,
+            gravity: "bottom",
+            position: "right",
+            backgroundColor: "#27AB00",
+            stopOnFocus: true,
+          }).showToast();
+          f_submit.disabled = false;
+          f_submit.textContent = "Enviar";
+          f_submit.classList.remove("disabled-btn");
+          f_submit.classList.add("cursor-pointer");
+          f_submit.classList.remove("bg-gris");
+          f_submit.classList.add("bg-azul");
+        } else {
+          form.reset();
+          Toastify({
+            text: "Algo salió mal 🫣, intente de nuevo",
+            duration: 3000,
+            close: true,
+            gravity: "bottom", // "top" o "bottom"
+            position: "right", // "left", "center" o "right"
+            backgroundColor: "#BA9B00",
+            stopOnFocus: true,
+          }).showToast();
+          f_submit.disabled = false;
+          f_submit.textContent = "Enviar";
+          f_submit.classList.remove("disabled-btn");
+          f_submit.classList.add("cursor-pointer");
+          f_submit.classList.remove("bg-gris");
+          f_submit.classList.add("bg-azul");
+        }
+      })
+      .catch((err) => {
+        form.reset();
+        console.log(err);
         f_submit.disabled = false;
         f_submit.textContent = "Enviar";
         f_submit.classList.remove("disabled-btn");
         f_submit.classList.add("cursor-pointer");
         f_submit.classList.remove("bg-gris");
         f_submit.classList.add("bg-azul");
-        console.log(formData);
-        Toastify({
-          text: "Enviado con exito ✅",
-          duration: 3000,
-          close: true,
-          gravity: "bottom",
-          position: "right",
-          backgroundColor: "#27AB00",
-          stopOnFocus: true,
-        }).showToast();
-      })
-      .catch((err) => {
-        console.log(err);
         Toastify({
           text: "Algo salió mal 🫣, intente de nuevo",
           duration: 3000,
           close: true,
           gravity: "bottom", // "top" o "bottom"
           position: "right", // "left", "center" o "right"
-          backgroundColor: "#D30000",
+          backgroundColor: "#F5CC27",
           stopOnFocus: true,
         }).showToast();
       });
   } else {
+    f_submit.disabled = false;
+    f_submit.textContent = "Enviar";
+    f_submit.classList.remove("disabled-btn");
+    f_submit.classList.add("cursor-pointer");
+    f_submit.classList.remove("bg-gris");
+    f_submit.classList.add("bg-azul");
     Toastify({
       text: "Complete todos los campos antes de enviar ⛔",
       duration: 3000,

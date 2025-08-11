@@ -14,6 +14,7 @@
       type="text/javascript"
       src="./node_modules/toastify-js/src/toastify.js"
     ></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
   </head>
   <body>
     <header class="fixed inset-x-0 top-0 z-50 bg-azul">
@@ -556,9 +557,14 @@
         <input
           type="hidden"
           name="access_key"
-          value="8827c291-264c-4613- 9344-85ad5b264f65"
+          value="8827c291-264c-4613-9344-85ad5b264f65"
         />
-
+        <input
+          type="checkbox"
+          name="botcheck"
+          id="control"
+          style="display: none"
+        />
         <div class="flex flex-col w-full">
           <label
             for="first-name"
@@ -637,12 +643,14 @@
           <button
             type="submit"
             id="enviar"
-            class="rounded-md bg-azul px-3.5 py-2.5 text-base font-semibold text-[#fafafa] shadow-xs hover:bg-azul-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white mb-2 transition-all duration-200 hover:scale-105 cursor-pointer"
+            class="flex-wrap rounded-md bg-azul px-3.5 py-2.5 text-base font-semibold text-[#fafafa] shadow-xs hover:bg-azul-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white mb-2 transition-all duration-200 hover:scale-105 cursor-pointer"
           >
             Enviar
           </button>
+
           <div id="respuesta"></div>
         </div>
+        <div class="h-captcha lg:justify-self-start" data-captcha="true"></div>
       </form>
     </section>
 
