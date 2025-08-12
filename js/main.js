@@ -48,7 +48,6 @@ let num_valido = false;
 let msg_valido = false;
 f_submit.addEventListener("submit", () => {
   if (vNombre === false) {
-    console.log("ERROR");
   }
 });
 
@@ -144,7 +143,6 @@ form.addEventListener("submit", (e) => {
     });
 
     let json = JSON.stringify(formData);
-    console.log(json);
 
     fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -193,7 +191,6 @@ form.addEventListener("submit", (e) => {
       })
       .catch((err) => {
         form.reset();
-        console.log(err);
         f_submit.disabled = false;
         f_submit.textContent = "Enviar";
         f_submit.classList.remove("disabled-btn");
