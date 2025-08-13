@@ -106,18 +106,9 @@ dd {
 
 .bg-contacto {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/imgs/jugando1.webp");
+    url("/imgs/paleta6.webp");
   background-position: center;
   background-size: cover;
-}
-
-.bg-contacto-mob {
-  @media (max-width: 1024px) {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("/imgs/jugando1mob.webp");
-    background-position: center;
-    background-size: cover;
-  }
 }
 
 .disabled-btn {
