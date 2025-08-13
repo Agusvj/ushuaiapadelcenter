@@ -1415,22 +1415,18 @@ p, dd {
   background-position: center;
   background-size: cover;
 }
+.bg-contacto {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imgs/jugando1.webp");
+  background-position: center;
+  background-size: cover;
+}
+.bg-contacto-mob {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imgs/jugando1mob.webp");
+  background-position: center;
+  background-size: cover;
+}
 .disabled-btn {
   color: rgb(90, 90, 90);
-}
-@media (max-width: 640px) {
-  #contacto {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imgs/jugando1mob.webp");
-    background-position: center;
-    background-size: cover;
-  }
-}
-@media (min-width: 641px) {
-  #contacto {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imgs/jugando1.webp");
-    background-position: center;
-    background-size: cover;
-  }
 }
 @property --tw-translate-x {
   syntax: "*";
